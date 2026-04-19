@@ -13,3 +13,11 @@ Documentar plan de "audit-windows-defender-smartscreen" en `planificacion/panel-
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-windows-defender-smartscreen.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
