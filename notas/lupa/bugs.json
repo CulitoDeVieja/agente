@@ -1,0 +1,87 @@
+{
+  "$schema": "bugs.schema.v1",
+  "updated": "2026-04-19",
+  "curator": "lupa",
+  "resumen": {
+    "total": 7,
+    "cerrados": 4,
+    "abiertos": 3,
+    "criticos_abiertos": 0
+  },
+  "bugs": [
+    {
+      "id": "LUPA-001",
+      "titulo": "list_tasks usa rol: String con valor mágico 'all'",
+      "severidad": "media",
+      "estado": "cerrado",
+      "detectado_por": "lupa",
+      "fuente": "notas/lupa/contradicciones-v0.1.md#2",
+      "tarea_fix": "builder-fix-001-list-tasks-option-rol",
+      "resuelto_en": "commit 30b8f40 panel-agentes",
+      "fecha_cierre": "2026-04-19"
+    },
+    {
+      "id": "LUPA-002",
+      "titulo": "Ambigüedad: 4 mockups sin canónico marcado",
+      "severidad": "baja",
+      "estado": "cerrado",
+      "detectado_por": "lupa",
+      "fuente": "notas/lupa/contradicciones-v0.1.md#1",
+      "tarea_fix": "orchestrator-012-archivar-mockups-previos",
+      "resuelto_en": "v4 canónico, v1/v2/v3 en archivo/",
+      "fecha_cierre": "2026-04-19"
+    },
+    {
+      "id": "LUPA-003",
+      "titulo": "Falta ADR justificando Command::git y parser markdown manual",
+      "severidad": "baja",
+      "estado": "abierto",
+      "detectado_por": "lupa",
+      "fuente": "notas/lupa/contradicciones-v0.1.md#2",
+      "tarea_fix": null,
+      "recomendacion": "Crear tarea builder-adr-001 cuando se decida"
+    },
+    {
+      "id": "LUPA-004",
+      "titulo": "Skills-curator hacía commits gigantes (viola R5 anti-choques)",
+      "severidad": "media",
+      "estado": "cerrado",
+      "detectado_por": "lupa",
+      "fuente": "notas/lupa/contradicciones-v0.1.md#4",
+      "tarea_fix": "skills-curator-106-push-por-tarea",
+      "resuelto_en": "patrón 3-pushes aplicado desde tarea 106",
+      "fecha_cierre": "2026-04-19"
+    },
+    {
+      "id": "LUPA-005",
+      "titulo": "Default branch repo panel-agentes es ops/init (solo README)",
+      "severidad": "alta",
+      "estado": "cerrado",
+      "detectado_por": "lupa",
+      "fuente": "notas/lupa/test-report-v0.1.md#bug-grave",
+      "tarea_fix": "auditor-ops-fix-002-default-branch",
+      "resuelto_en": "main ahora default, ops/init eliminado",
+      "fecha_cierre": "2026-04-19"
+    },
+    {
+      "id": "LUPA-006",
+      "titulo": "npm audit warnings (vulnerabilidades no críticas en deps)",
+      "severidad": "baja",
+      "estado": "abierto",
+      "detectado_por": "lupa",
+      "fuente": "notas/lupa/test-report-v0.1.md#warnings",
+      "tarea_fix": null,
+      "recomendacion": "Correr npm audit fix en próximo ciclo del builder"
+    },
+    {
+      "id": "LUPA-007",
+      "titulo": "Auditor-ops hace rm en vez de git mv (tareas se pierden)",
+      "severidad": "media",
+      "estado": "abierto",
+      "detectado_por": "orchestrator",
+      "fuente": "observacion recurrente",
+      "tarea_fix": null,
+      "recomendacion": "Tarea auditor-ops explicándole workflow git mv"
+    }
+  ]
+}
