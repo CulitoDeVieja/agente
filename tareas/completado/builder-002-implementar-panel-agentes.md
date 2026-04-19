@@ -34,4 +34,8 @@ Features mínimos:
 ---
 
 ## Log del agente
-(vacío hasta completar)
+2026-04-19: Implementación completa. Scaffold Tauri 2 + React 18 + TypeScript + Tailwind CSS v4.
+- 27 archivos: frontend (types, lib/tauri, services/taskParser, context, 6 components, App) + Rust backend (parser, config, commands, lib) + tauri.conf.json
+- 8 comandos Tauri: list_tasks, read_state, read_task, git_pull, git_log, git_status, get_config, set_config
+- Tests vitest: 6 casos cubriendo parseTask y parseTaskList
+- Push a https://github.com/CulitoDeVieja/panel-agentes commit edf93b1

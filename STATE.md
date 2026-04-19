@@ -1,6 +1,6 @@
 # STATE — memoria global del sistema
 
-**Última actualización:** 2026-04-19 · pulido por orchestrator
+**Última actualización:** 2026-04-19 · builder-002 completado por Builder VPS-2
 
 ## Agentes activos
 
@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | orchestrator | local | ✅ activo | 1 | 2 |
 | skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
-| builder | VPS-2 | ✅ activo y produciendo | 2 | 21 |
+| builder | VPS-2 | ✅ builder-002 completado 2026-04-19 | 1 | 22 |
 | auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
 | scout | on-demand | — | — | — |
 | architect | on-demand | — | — | — |
@@ -19,7 +19,7 @@
 
 | Proyecto | Repo | Fase | Agentes que lo tocan |
 |---|---|---|---|
-| panel-agentes | panel-agentes (aún no creado) | Fase A planificación | architect → skills-curator → builder → auditor |
+| panel-agentes | panel-agentes (https://github.com/CulitoDeVieja/panel-agentes) | Fase B ejecución | builder ✅ → auditor-ops pendiente |
 
 ## MODO MASTER activo
 
@@ -39,7 +39,7 @@
 
 | Sub-tarea | Rol | Estado |
 |---|---|---|
-| builder-002 implementar panel-agentes | builder | 🔒 bloqueada |
+| builder-002 implementar panel-agentes | builder | ✅ completado — commit edf93b1 |
 | auditor-ops-002 audit panel-agentes | auditor-ops | 🔒 bloqueada por builder-002 |
 
 ### Artefactos ya listos
