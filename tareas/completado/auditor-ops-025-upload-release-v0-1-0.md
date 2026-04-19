@@ -15,3 +15,11 @@ Documentar plan de "upload-release-v0-1-0" en `planificacion/panel-agentes/detal
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-upload-release-v0-1-0.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
