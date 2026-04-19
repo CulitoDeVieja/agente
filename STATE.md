@@ -6,10 +6,10 @@
 
 | Rol | Ubicación | Última señal |
 |---|---|---|
-| orchestrator | local | — |
-| skills-curator | VPS-1 | — |
-| builder | VPS-2 | — |
-| auditor-ops | VPS-3 | — |
+| orchestrator | local | ✅ activo 2026-04-19 |
+| skills-curator | VPS-1 | ⏳ esperando primer ciclo |
+| builder | VPS-2 | ⏳ esperando primer ciclo |
+| auditor-ops | VPS-3 | ⏳ esperando primer ciclo |
 | scout | on-demand | — |
 | architect | on-demand | — |
 
