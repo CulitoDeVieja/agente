@@ -24,3 +24,11 @@ Planificar qué se va a auditar y cómo se va a deployar el build final.
 
 ## Log del agente
 (vacío hasta completar)
+
+
+---
+
+## Log del agente
+- `planificacion/panel-agentes/04-auditoria.md` completado (aprobado)
+- Checklist de auditoría (código, seguridad, UX, métricas) + plan deploy + rollback
+- AC cumplidos
