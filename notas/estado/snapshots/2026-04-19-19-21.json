@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-04-19T19:21:50Z",
+  "tareas_total": {"pend": 599, "comp": 466},
+  "slots": {"pend": 599, "comp": 1, "total": 600},
+  "bugs": {"abiertos": 0, "cerrados": 14},
+  "tests": "11/11 vitest",
+  "ultimo_merge": "slot-0001 fetchTareasGitHub",
+  "version": "v0.1-preview",
+  "proximos_libres": ["slot-0002","slot-0004..0015 (Fase1)","slot-0016..0045 (Fase2 UI)"]
+}
