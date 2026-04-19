@@ -13,3 +13,11 @@ Documentar plan de "plan-migracion-web-future" en `planificacion/panel-agentes/d
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-plan-migracion-web-future.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
