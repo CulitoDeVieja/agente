@@ -1,19 +1,27 @@
 # STATE — memoria global del sistema
 
-**Última actualización:** 2026-04-19 · CELL! completo + AVISO leído — Builder VPS-2 sin cola
+**Última actualización:** 2026-04-19 · `lupa` regeneró tabla de agentes del filesystem real
 
-## Agentes activos
+## 🟢 Sistema desbloqueado — 448 tareas completadas
 
-| Rol | Ubicación | Última señal | Pend | Comp |
+Post-fix del incidente 2026-04-19 (204 false-completed revertidas por lupa), los agentes VPS procesaron toda la cola. Ver `notas/FIX-FALSE-COMPLETED-20260419.md`.
+
+## Agentes activos (números REALES del filesystem al 2026-04-19)
+
+| Rol | Ubicación | Pendiente | En-curso | Completado |
 |---|---|---|---|---|
-| orchestrator | local | ✅ activo | 1 | 2 |
-| skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
-| builder | VPS-2 | ✅ CELL! completo (10 evo + 108 + AAA + AVISO) | 0 | 45 |
-| auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
+| orchestrator | local | 0 | 2 | 5 |
+| skills-curator | VPS-1 | 0 ✅ | 0 | **122** |
+| builder | VPS-2 | 0 ✅ | 0 | **122** |
+| auditor-ops | VPS-3 | 0 ✅ | 0 | **121** |
+| architect | on-demand | 0 | 0 | 72 |
 | scout | on-demand | — | — | — |
-| architect | on-demand | — | — | — |
 
-**Observación orchestrator:** skills-curator y auditor-ops reportaron señal pero no procesan tareas. Posible causa: no están loopeando efectivamente o el prompt del ciclo en sus VPS no busca tareas con su prefijo. Escalar si sigue 3 ciclos más así.
+**Total:** 448 completadas, 0 pendientes. El panteón completo está al día.
+
+**Observación del orchestrator:** skills-curator, builder y auditor-ops procesaron masivamente después del fix de lupa. El problema era que los archivos estaban en `completado/` con log vacío — una vez revertidos a `pendiente/`, los agentes los picaron en 1-2 ciclos cada uno.
+
+**Deuda pendiente:** `orchestrator-100-regenerar-estado-real.md` sigue pendiente — sin `tools/health.sh`, este STATE.md se va a volver a desactualizar si alguien edita a mano. **Recomendación:** implementar el health.sh antes del próximo ciclo.
 
 ## Proyectos activos
 
