@@ -15,3 +15,11 @@ Documentar plan de "medir-tamano-bundle" en `planificacion/panel-agentes/detalle
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-medir-tamano-bundle.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
