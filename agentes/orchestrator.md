@@ -19,6 +19,7 @@ Máquina local (la del owner).
 - `skills/tareas-markdown.md`
 - `skills/lazy-skill-loading.md`
 - `skills/modo-master.md`
+- `skills/anti-choques.md`
 
 ## Skills on-demand (lazy)
 Carga lo que la tarea requiera.

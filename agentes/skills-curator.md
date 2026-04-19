@@ -18,6 +18,7 @@ VPS-1 (Hostinger), loop manual.
 - `skills/tareas-markdown.md`
 - `skills/lazy-skill-loading.md`
 - `skills/modo-master.md`
+- `skills/anti-choques.md`
 - `skills/skill-authoring.md`
 
 ## Skills on-demand

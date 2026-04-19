@@ -10,6 +10,7 @@ Se cargan **lazy**: el agente lee solo las que necesita para la tarea actual, pa
 - `tareas-markdown.md` — tomar, trabajar y completar tareas desde `tareas/`.
 - `lazy-skill-loading.md` — cómo decidir qué skills cargar.
 - `modo-master.md` — respetar dependencias entre tareas encadenadas.
+- `anti-choques.md` — namespace por rol + retry con backoff.
 
 ## Skills por rol
 
