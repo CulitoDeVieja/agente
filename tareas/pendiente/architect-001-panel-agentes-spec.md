@@ -8,6 +8,8 @@
 ## Contexto
 App nativa de escritorio (solo Windows, ejecutable `.exe`) que muestre progreso de cada agente y sus tareas.
 
+**Plan master de referencia:** `/PLAN-MASTER-panel-agentes.md` en la raíz del repo. Tu spec debe ser coherente con él; podés profundizar pero no contradecir decisiones del plan.
+
 ## Stack definido por orchestrator
 - **Tauri 2** (backend Rust + frontend web). Razón: exe <10MB, nativo, seguro, acceso directo a filesystem.
 - **Frontend:** React + TypeScript + Vite.

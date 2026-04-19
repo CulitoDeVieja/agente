@@ -9,6 +9,8 @@
 ## Qué hacer
 Implementar la app según spec de architect. Stack: Tauri 2 + React + TS + Tailwind.
 
+**Plan master de referencia:** `/PLAN-MASTER-panel-agentes.md` en la raíz del repo `agente`. Tiene estructura de carpetas, comandos Rust, tipos TS y wireframes ya definidos.
+
 Features mínimos:
 - Dashboard con 4 cards (1 por agente en loop).
 - Click en card → vista detalle con pendientes / en-curso / últimas 10 completadas.
