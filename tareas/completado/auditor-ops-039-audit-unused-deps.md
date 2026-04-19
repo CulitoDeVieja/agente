@@ -13,3 +13,11 @@ Documentar plan de "audit-unused-deps" en `planificacion/panel-agentes/detalle/a
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-unused-deps.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
