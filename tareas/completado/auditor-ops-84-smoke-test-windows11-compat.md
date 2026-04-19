@@ -13,3 +13,11 @@ Documentar plan de "smoke-test-windows11-compat" en `planificacion/panel-agentes
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-smoke-test-windows11-compat.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
