@@ -13,3 +13,11 @@ Documentar plan de "plan-sync-multi-device" en `planificacion/panel-agentes/deta
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-plan-sync-multi-device.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
