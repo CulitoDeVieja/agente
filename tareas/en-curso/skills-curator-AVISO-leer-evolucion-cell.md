@@ -15,3 +15,8 @@
 - [ ] Próximo movimiento: tomar skills-curator-evo-200.
 
 ## Depende de: (ninguna — primera de todas)
+
+---
+## Log del agente
+- AVISO leído 2026-04-19.
+- Próximo movimiento: skills-curator-200-evo-tanstack-query-v5-novedades.
