@@ -13,3 +13,11 @@ Documentar plan de "audit-comparar-spec-vs-impl" en `planificacion/panel-agentes
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-comparar-spec-vs-impl.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
