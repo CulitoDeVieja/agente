@@ -13,3 +13,11 @@ Documentar plan de "plan-pwa-transition" en `planificacion/panel-agentes/detalle
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-plan-pwa-transition.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
