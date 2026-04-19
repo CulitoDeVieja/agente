@@ -7,9 +7,9 @@
 | Rol | Ubicación | Última señal |
 |---|---|---|
 | orchestrator | local | ✅ activo 2026-04-19 |
-| skills-curator | VPS-1 | ⏳ esperando primer ciclo |
-| builder | VPS-2 | ✅ activo 2026-04-19 |
-| auditor-ops | VPS-3 | ⏳ esperando primer ciclo |
+| skills-curator | VPS-1 | ✅ activo 2026-04-19 (sincronizado modo master) |
+| builder | VPS-2 | ✅ activo 2026-04-19 (sincronizado modo master) |
+| auditor-ops | VPS-3 | ✅ activo 2026-04-19 (sincronizado modo master) |
 | scout | on-demand | — |
 | architect | on-demand | — |
 
@@ -31,9 +31,17 @@
 | auditor-ops-002-audit-panel-agentes | auditor-ops | bloqueada | builder-002 |
 
 **Orden de ejecución esperado:**
-1. En paralelo: architect + skills-curator (arrancan ya, no se bloquean entre sí).
-2. Builder (cuando los 2 anteriores terminen).
-3. Auditor-ops (cuando builder termine).
+
+**Fase A — Planificación** (obligatoria antes de programar, `planificacion/panel-agentes/`):
+1. architect escribe `01-arquitectura.md`
+2. skills-curator escribe `02-skills.md` (paralelo con architect)
+3. builder escribe `03-implementacion.md` (espera 01+02)
+4. auditor-ops escribe `04-auditoria.md` (espera 03)
+5. orchestrator aprueba `revision.md`
+
+**Fase B — Ejecución** (solo tras Fase A aprobada):
+6. builder ejecuta `builder-002-implementar-panel-agentes`
+7. auditor-ops ejecuta `auditor-ops-002-audit-panel-agentes`
 
 ## Decisiones pendientes del owner
 
