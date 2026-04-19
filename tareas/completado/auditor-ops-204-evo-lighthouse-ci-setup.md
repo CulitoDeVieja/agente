@@ -13,3 +13,8 @@ Ciclo evolución. Investigar web sobre "lighthouse-ci-setup" y guardar en `conoc
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Fuente: GoogleChrome/lighthouse-ci + treosh action + LHCI docs.
+- Archivo: conocimiento/auditor-ops/2026-04-19-lighthouse-ci-setup.md
