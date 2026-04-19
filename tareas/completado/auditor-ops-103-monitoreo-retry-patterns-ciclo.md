@@ -13,3 +13,11 @@ Documentar plan de "monitoreo-retry-patterns-ciclo" en `planificacion/panel-agen
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-monitoreo-retry-patterns-ciclo.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
