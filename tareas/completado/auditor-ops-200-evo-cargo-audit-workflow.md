@@ -13,3 +13,9 @@ Ciclo evolución. Investigar web sobre "cargo-audit-workflow" y guardar en `cono
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Investigado web (RustSec, actions-rust-lang/audit).
+- Archivo: conocimiento/auditor-ops/2026-04-19-cargo-audit-workflow.md
+- Fuente real ✅, Aplicabilidad clara ✅
