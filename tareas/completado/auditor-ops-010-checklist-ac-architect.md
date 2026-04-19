@@ -15,3 +15,11 @@ Documentar plan de "checklist-ac-architect" en `planificacion/panel-agentes/deta
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-checklist-ac-architect.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
