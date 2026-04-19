@@ -13,3 +13,11 @@ Documentar plan de "plan-cloud-backup-state" en `planificacion/panel-agentes/det
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-plan-cloud-backup-state.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
