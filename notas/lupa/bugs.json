@@ -3,10 +3,11 @@
   "updated": "2026-04-19",
   "curator": "lupa",
   "resumen": {
-    "total": 7,
+    "total": 14,
     "cerrados": 7,
-    "abiertos": 0,
-    "criticos_abiertos": 0
+    "abiertos": 7,
+    "criticos_abiertos": 0,
+    "altos_abiertos": 4
   },
   "bugs": [
     {
@@ -85,6 +86,86 @@
       "tarea_fix": "auditor-ops-fix-003-usar-git-mv + regla R4 reforzada en anti-choques.md",
       "resuelto_en": "skill actualizada + tarea pendiente para auditor",
       "fecha_cierre": "2026-04-19"
+    },
+    {
+      "id": "LUPA-008",
+      "titulo": "Backend serde snake_case vs frontend TS camelCase (modoMasterActive siempre undefined)",
+      "severidad": "alta",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-004-serde-camelcase",
+      "ubicacion": "src-tauri/src/parser.rs + src-tauri/src/config.rs"
+    },
+    {
+      "id": "LUPA-009",
+      "titulo": "Build falla por `Task` import unused (noUnusedLocals)",
+      "severidad": "alta",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-005-import-unused",
+      "ubicacion": "src/components/AgentDetail.tsx:1"
+    },
+    {
+      "id": "LUPA-010",
+      "titulo": "Falta src-tauri/capabilities/ (Tauri 2 requiere; commands custom no invocables)",
+      "severidad": "alta",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-006-tauri-capabilities",
+      "ubicacion": "src-tauri/capabilities/ (no existe)"
+    },
+    {
+      "id": "LUPA-011",
+      "titulo": "tauri.conf.json referencia íconos inexistentes (cargo tauri build falla en bundle)",
+      "severidad": "alta",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-007-tauri-icons",
+      "ubicacion": "src-tauri/tauri.conf.json:29-35 + src-tauri/icons/ (no existe)"
+    },
+    {
+      "id": "LUPA-012",
+      "titulo": "README inconsistente: menciona git2 (rechazado) y pnpm (usa npm)",
+      "severidad": "media",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-008-readme-deps",
+      "ubicacion": "README.md"
+    },
+    {
+      "id": "LUPA-013",
+      "titulo": "repo_path default Windows-only (rompe tests cross-platform)",
+      "severidad": "media",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-009-config-default-cross-platform",
+      "ubicacion": "src-tauri/src/config.rs:14"
+    },
+    {
+      "id": "LUPA-014",
+      "titulo": "Falta vitest.config con environment jsdom (tests futuros de componentes React fallarán)",
+      "severidad": "media",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "builder-fix-010-vitest-jsdom",
+      "ubicacion": "vitest.config.ts (no existe)"
+    },
+    {
+      "id": "LUPA-015",
+      "titulo": "panel-agentes sin .github/workflows/ (sin CI)",
+      "severidad": "media",
+      "estado": "abierto",
+      "detectado_por": "auditor-ops",
+      "fuente": "audit dinámico subagente 2026-04-19",
+      "tarea_fix": "auditor-ops-fix-004-setup-ci-workflow",
+      "ubicacion": ".github/workflows/ (no existe)"
     }
   ]
 }
