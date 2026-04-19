@@ -13,3 +13,11 @@ Documentar plan de "audit-react-keys" en `planificacion/panel-agentes/detalle/au
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-react-keys.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
