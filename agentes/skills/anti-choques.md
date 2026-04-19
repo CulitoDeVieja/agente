@@ -39,13 +39,17 @@ Nunca `git push --force`.
 ## Regla 4 — Mover, no reescribir
 Una tarea que cambia de estado (`pendiente → en-curso → completado`) se **mueve** con `git mv`, no se borra y recrea. El historial git detecta el rename y evita conflictos.
 
-## Regla 5 — Un commit por acción lógica
-Un agente no acumula 10 cambios en un commit. Un push por acción:
-- Tomar tarea → 1 commit (mv a en-curso)
-- Escribir archivo → 1 commit
-- Completar → 1 commit (mv a completado + log)
+## Regla 5 — Un commit + push por tarea (DURA)
+**Cada tarea terminada se sube inmediatamente. No se acumula.**
 
-Así el rebase de otro agente es rápido.
+Secuencia por tarea (3 pushes):
+1. Tomar → `git mv pendiente/X en-curso/` → commit → **push**
+2. Ejecutar → escribir archivos de output → commit → **push**
+3. Completar → `git mv en-curso/X completado/` + log → commit → **push**
+
+**Prohibido:** procesar 5 tareas y hacer 1 solo push al final. Rompe la visibilidad del owner y genera rebases pesados para los demás.
+
+Si vas a hacer 50 tareas en un ciclo → 150 commits mínimo. El cron de 1 min debe rendirse si está por terminarse y no llegó a la tarea 50 → completa lo que tenés, push, y la siguiente ronda la toma el próximo ciclo.
 
 ## Errores comunes
 - Editar un archivo de otro rol "por comodidad" → crea conflict trasparente en el próximo push del dueño.
