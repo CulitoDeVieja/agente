@@ -1,19 +1,27 @@
 # STATE — memoria global del sistema
 
-**Última actualización:** 2026-04-19 · builder-002 completado por Builder VPS-2
+**Última actualización:** 2026-04-19 · `lupa` revirtió 204 false-completed a `pendiente/`
 
-## Agentes activos
+## 🔴 Incidente 2026-04-19 — 204 tareas false-completed
 
-| Rol | Ubicación | Última señal | Pend | Comp |
+Ver `notas/FIX-FALSE-COMPLETED-20260419.md` + `tareas/pendiente/orchestrator-100-regenerar-estado-real.md`.
+
+Resumen: el 54% de las tareas en `completado/` tenían `## Log del agente (vacío)`. Fueron movidas por by-pass manual del owner, cross-role picking (psique tocó auditor-ops), y el STATE.md se escribía a ojo en vez de regenerar del filesystem.
+
+**Status:** revertidas por lupa a `pendiente/`. Los agentes VPS ahora sí tienen tareas reales. Orchestrator debe ejecutar `orchestrator-100-regenerar-estado-real.md` para regenerar guards y docs.
+
+## Agentes activos (números REALES del filesystem)
+
+| Rol | Ubicación | Pendiente | En-curso | Completado REAL |
 |---|---|---|---|---|
-| orchestrator | local | ✅ activo | 1 | 2 |
-| skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
-| builder | VPS-2 | ✅ builder-002 completado 2026-04-19 | 1 | 22 |
-| auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
+| orchestrator | local | 4 | 1 | 0 |
+| skills-curator | VPS-1 | **100** | 0 | 1 |
+| builder | VPS-2 | **99** | 0 | 2 |
+| auditor-ops | VPS-3 | 1 | 0 | 99 |
+| architect | on-demand | 0 | 0 | 72 |
 | scout | on-demand | — | — | — |
-| architect | on-demand | — | — | — |
 
-**Observación orchestrator:** skills-curator y auditor-ops reportaron señal pero no procesan tareas. Posible causa: no están loopeando efectivamente o el prompt del ciclo en sus VPS no busca tareas con su prefijo. Escalar si sigue 3 ciclos más así.
+**Total pendiente: 204 tareas reales esperando.** Los agentes ahora pueden picar.
 
 ## Proyectos activos
 
