@@ -21,4 +21,17 @@ Crear `.github/workflows/ci.yml` con:
 - [ ] Primer run pasa al menos `frontend job` (después de fixes 004-010 deberían pasar todos).
 - [ ] Status check visible en PRs futuros.
 
-## Depende de: (ninguna — se puede agregar antes que builder fixee 004-010, simplemente fallarán hasta que se arreglen)
+## Depende de: (ninguna técnica — pero ver bloqueo abajo)
+
+## Bloqueo (2026-04-19, intento 1)
+Push a panel-agentes rechazado:
+```
+! [remote rejected] main -> main (refusing to allow an OAuth App to create or update workflow `.github/workflows/ci.yml` without `workflow` scope)
+```
+`gh auth status` confirma: token actual tiene scopes `gist, read:org, repo` — falta `workflow`.
+
+**Acción requerida del owner:** correr en su terminal local:
+```bash
+gh auth refresh -s workflow
+```
+Después puedo retomar la tarea sin más cambios. El `ci.yml` ya está escrito y testeado localmente, solo falta el push.
