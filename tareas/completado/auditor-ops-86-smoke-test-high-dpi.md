@@ -13,3 +13,11 @@ Documentar plan de "smoke-test-high-dpi" en `planificacion/panel-agentes/detalle
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-smoke-test-high-dpi.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
