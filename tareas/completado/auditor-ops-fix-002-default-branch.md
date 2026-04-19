@@ -20,3 +20,11 @@ gh api repos/CulitoDeVieja/panel-agentes/git/refs/heads/ops/init -X DELETE
 - [ ] Branch `ops/init` eliminada.
 
 ## Depende de: (ninguna — urgente)
+
+---
+## Log auditor-ops
+- `gh api repos/CulitoDeVieja/panel-agentes -X PATCH -f default_branch=main` ✅
+- `gh api repos/CulitoDeVieja/panel-agentes/git/refs/heads/ops/init -X DELETE` ✅
+- Verify: `gh repo view ... --json defaultBranchRef` → `{"defaultBranchRef":{"name":"main"}}` ✅
+- Bloqueante release v0.1 destrabado.
+- AC ✅
