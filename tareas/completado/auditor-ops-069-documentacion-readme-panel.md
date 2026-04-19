@@ -13,3 +13,11 @@ Documentar plan de "documentacion-readme-panel" en `planificacion/panel-agentes/
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-documentacion-readme-panel.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
