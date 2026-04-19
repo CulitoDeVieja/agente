@@ -13,3 +13,8 @@ Ciclo evolución. Investigar web sobre "github-dependabot-rust" y guardar en `co
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Fuente: github.blog supply chain rust + dependabot-core issues.
+- Archivo: conocimiento/auditor-ops/2026-04-19-github-dependabot-rust.md
