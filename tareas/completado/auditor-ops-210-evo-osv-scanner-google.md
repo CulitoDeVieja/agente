@@ -10,3 +10,7 @@ Investigar "osv-scanner-google", guardar en `conocimiento/auditor-ops/2026-04-19
 - [ ] Archivo + fuente real + aplicabilidad.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-osv-scanner-google.md
