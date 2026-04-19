@@ -18,19 +18,19 @@ Se cargan **lazy**: el agente lee solo las que necesita para la tarea actual, pa
 
 ### Auditor + Ops
 - `test-running.md` — correr test suites.
-- `railway-deploy.md` *(a crear)*
-- `systemd-services.md` *(a crear)*
+- `railway-deploy.md` — deployar servicios a Railway desde CLI.
+- `systemd-services.md` — gestionar servicios systemd en VPS.
 
 ### Skills-Curator
 - `skill-authoring.md` — cómo escribir una skill nueva.
 
 ### Architect
-- `spec-authoring-AC.md` *(a crear)*
-- `adr-template.md` *(a crear)*
+- `spec-authoring-AC.md` — escribir specs con Acceptance Criteria accionables.
+- `adr-template.md` — documentar decisiones de arquitectura.
 
 ### Scout
-- `research-web.md` *(a crear)*
-- `persona-journey-writing.md` *(a crear)*
+- `research-web.md` — investigar tecnologías y comparar opciones.
+- `persona-journey-writing.md` — escribir personas y user journeys.
 
 ## Convención de nombres
 - `<categoria>-<nombre>.md` (ej: `git-workflow.md`, `nodejs-express.md`)
