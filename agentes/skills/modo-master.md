@@ -9,6 +9,8 @@ Siempre. Es skill base de todos los agentes (orchestrator, skills-curator, build
 ## Concepto
 Una tarea madre se descompone en sub-tareas, una por rol. Cada sub-tarea puede depender de otras (`## Depende de:`). El agente NO toma una sub-tarea hasta que sus dependencias estén en `tareas/completado/`.
 
+**Regla dura:** antes de programar, pasa por `planificacion/<proyecto>/`. Ver `planificacion/README.md`. Una tarea `builder-*` NO se toma hasta que el `revision.md` del proyecto esté aprobado.
+
 ## Pasos al evaluar una tarea pendiente
 
 1. Leer el archivo de tarea completo.
