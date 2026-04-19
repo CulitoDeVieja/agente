@@ -13,3 +13,11 @@ Documentar plan de "smoke-test-detalle-abre" en `planificacion/panel-agentes/det
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-smoke-test-detalle-abre.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
