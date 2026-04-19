@@ -15,3 +15,11 @@ Documentar plan de "configurar-ci-opcional" en `planificacion/panel-agentes/deta
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-configurar-ci-opcional.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
