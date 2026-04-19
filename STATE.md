@@ -17,7 +17,7 @@
 
 | Proyecto | Repo | Agentes que lo tocan |
 |---|---|---|
-| (ninguno aún) | — | — |
+| panel-agentes | panel-agentes (a crear) | architect → builder → auditor |
 
 ## Decisiones pendientes del owner
 
