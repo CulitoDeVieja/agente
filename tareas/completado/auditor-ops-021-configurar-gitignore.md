@@ -15,3 +15,11 @@ Documentar plan de "configurar-gitignore" en `planificacion/panel-agentes/detall
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-configurar-gitignore.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
