@@ -15,3 +15,11 @@ Documentar plan de "grep-credenciales-hardcoded" en `planificacion/panel-agentes
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-grep-credenciales-hardcoded.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
