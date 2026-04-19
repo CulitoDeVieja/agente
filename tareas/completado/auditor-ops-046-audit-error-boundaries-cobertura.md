@@ -13,3 +13,11 @@ Documentar plan de "audit-error-boundaries-cobertura" en `planificacion/panel-ag
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-error-boundaries-cobertura.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
