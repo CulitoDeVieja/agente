@@ -8,11 +8,11 @@
 Confirmar que VPS-3 está operativo y actualizar tu fila en `STATE.md`.
 
 ## Acceptance criteria
-- [ ] `git pull --rebase` funciona desde VPS-3.
-- [ ] `claude --version` responde.
-- [ ] `echo $AGENT_ROLE` devuelve `auditor-ops`.
-- [ ] Edit a `STATE.md` poniendo `✅ activo 2026-04-19` en tu fila.
-- [ ] Commit + push.
+- [x] `git pull --rebase` funciona desde VPS-3.
+- [x] `claude --version` responde (2.1.114).
+- [x] `echo $AGENT_ROLE` devuelve `auditor-ops` (confirmado por Antonio).
+- [x] Edit a `STATE.md` poniendo `✅ activo 2026-04-19` en tu fila.
+- [x] Commit + push.
 
 ## Skills probables
 - skills/git-workflow.md
@@ -20,4 +20,6 @@ Confirmar que VPS-3 está operativo y actualizar tu fila en `STATE.md`.
 ---
 
 ## Log del agente
-(vacío hasta completar)
+- STATE.md actualizado: fila auditor-ops → `✅ activo 2026-04-19`, pend actualizado a 100
+- claude 2.1.114, git OK
+- Rol confirmado por Antonio (psique = auditor-ops)

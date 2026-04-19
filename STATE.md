@@ -9,7 +9,7 @@
 | orchestrator | local | ✅ activo | 1 | 2 |
 | skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
 | builder | VPS-2 | ✅ activo y produciendo | 2 | 21 |
-| auditor-ops | VPS-3 | ✅ señal inicial — sin progreso aún | 24 | 0 |
+| auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
 | scout | on-demand | — | — | — |
 | architect | on-demand | — | — | — |
 
