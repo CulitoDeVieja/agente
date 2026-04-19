@@ -3,9 +3,9 @@
   "updated": "2026-04-19",
   "curator": "lupa",
   "resumen": {
-    "total": 14,
-    "cerrados": 14,
-    "abiertos": 0,
+    "total": 16,
+    "cerrados": 15,
+    "abiertos": 1,
     "criticos_abiertos": 0,
     "altos_abiertos": 0
   },
@@ -24,6 +24,7 @@
     { "id": "LUPA-012", "titulo": "README inconsistente (git2, pnpm)", "severidad": "media", "estado": "cerrado", "resuelto_en": "README actualizado en commit 70159ac", "fecha_cierre": "2026-04-19" },
     { "id": "LUPA-013", "titulo": "repo_path default Windows-only", "severidad": "media", "estado": "cerrado", "resuelto_en": "dirs::data_local_dir() cross-platform commit 70159ac", "fecha_cierre": "2026-04-19" },
     { "id": "LUPA-014", "titulo": "Falta vitest.config con jsdom", "severidad": "media", "estado": "cerrado", "resuelto_en": "vitest.config.ts creado commit 70159ac", "fecha_cierre": "2026-04-19" },
-    { "id": "LUPA-015", "titulo": "panel-agentes sin CI", "severidad": "media", "estado": "cerrado", "resuelto_en": ".github/workflows/ci.yml creado commit 520b70e", "fecha_cierre": "2026-04-19" }
+    { "id": "LUPA-015", "titulo": "panel-agentes sin CI", "severidad": "media", "estado": "cerrado", "resuelto_en": ".github/workflows/ci.yml creado commit 520b70e", "fecha_cierre": "2026-04-19" },
+    { "id": "LUPA-016", "titulo": "CI rust-check job falla: cargo fmt --check (commands.rs sin formatear)", "severidad": "media", "estado": "abierto", "detectado_por": "auditor-ops", "fuente": "CI run 24635187055 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-011-rustfmt-commands-rs", "ubicacion": "src-tauri/src/commands.rs (líneas 34, 43, 104, 111, 117, 143)" }
   ]
 }
