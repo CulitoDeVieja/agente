@@ -19,6 +19,22 @@
 |---|---|---|
 | panel-agentes | panel-agentes (a crear) | architect → builder → auditor |
 
+## MODO MASTER activo
+
+**Tarea madre:** panel-agentes (app Tauri Windows)
+
+| Sub-tarea | Rol | Estado | Depende de |
+|---|---|---|---|
+| architect-001-panel-agentes-spec | architect | pendiente | — |
+| skills-curator-002-skill-tauri-architecture | skills-curator | pendiente | — |
+| builder-002-implementar-panel-agentes | builder | bloqueada | architect-001 + skills-curator-002 |
+| auditor-ops-002-audit-panel-agentes | auditor-ops | bloqueada | builder-002 |
+
+**Orden de ejecución esperado:**
+1. En paralelo: architect + skills-curator (arrancan ya, no se bloquean entre sí).
+2. Builder (cuando los 2 anteriores terminen).
+3. Auditor-ops (cuando builder termine).
+
 ## Decisiones pendientes del owner
 
 (ninguna)
