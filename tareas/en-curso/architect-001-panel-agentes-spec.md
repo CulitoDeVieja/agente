@@ -29,9 +29,9 @@ App nativa de escritorio (solo Windows, ejecutable `.exe`) que muestre progreso 
 4. **(nice-to-have)** Botón "crear tarea" → formulario minimal que guarda archivo en `tareas/pendiente/`.
 
 ## Acceptance criteria
-- [ ] Spec escrita en `notas/architect/paso-001-panel-agentes-spec.md` dentro del nuevo repo `panel-agentes`.
-- [ ] Incluye: estructura de carpetas, lista de componentes React, comandos Tauri necesarios (ej: `read_dir`, `read_file`, `run_git_pull`), wireframe ASCII de las 2 vistas.
-- [ ] Plan de 3-5 pasos de implementación para Builder.
+- [x] Spec escrita en `notas/architect/paso-001-panel-agentes-spec.md` (ubicada en repo `agente`, no en `panel-agentes` — ver log).
+- [x] Incluye: estructura de carpetas, lista de componentes React, comandos Tauri, wireframe ASCII de las 2 vistas.
+- [x] Plan de 3-5 pasos de implementación para Builder (5 pasos).
 
 ## Skills probables
 - skills/spec-authoring-AC.md
@@ -40,4 +40,8 @@ App nativa de escritorio (solo Windows, ejecutable `.exe`) que muestre progreso 
 ---
 
 ## Log del agente
-(vacío hasta completar)
+- Spec escrita en `notas/architect/paso-001-panel-agentes-spec.md` (dentro de `agente`, no de `panel-agentes`).
+  - Motivo: el repo `panel-agentes` fue creado público por error en esta sesión y quedó sin clonar por política. La estructura en `agente/notas/` ya existe (donde va ADR-001), así que la spec queda consolidada ahí hasta que el owner decida visibilidad del repo panel-agentes y builder clone para Paso 1.
+- Detalle técnico completo en `planificacion/panel-agentes/01-arquitectura.md` (tarea architect-002). Este doc linkea y aporta el plan de 5 pasos para builder.
+- Wireframes ASCII incluidos (Dashboard + Detalle).
+- Pendiente de owner: visibilidad del repo `CulitoDeVieja/panel-agentes` (recomendación: privado).
