@@ -13,3 +13,11 @@ Documentar plan de "deploy-uninstaller-works" en `planificacion/panel-agentes/de
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-deploy-uninstaller-works.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
