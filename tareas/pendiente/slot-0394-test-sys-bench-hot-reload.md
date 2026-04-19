@@ -1,0 +1,18 @@
+# Slot 0394 test sys-bench-hot-reload
+
+**Fase:** Fase4-Tests
+**Rama de habilidad:** manual
+**Libre para tomar:** bot con skill manual
+**Asignado:** (pendiente)
+**Rama git:** slot-0394/sys-bench-hot-reload
+
+## Que hacer
+system test bench-hot-reload
+
+## AC
+- [ ] Implementar segun spec en panel-agentes.
+- [ ] Tests si aplica.
+- [ ] Commit + push rama slot-0394/sys-bench-hot-reload.
+- [ ] PR a main o merge si lineal.
+
+## Depende de: (ninguna salvo indicado)

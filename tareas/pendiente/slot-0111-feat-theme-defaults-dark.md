@@ -1,0 +1,18 @@
+# Slot 0111 feat theme-defaults-dark
+
+**Fase:** Fase3-Features
+**Rama de habilidad:** ts
+**Libre para tomar:** bot con skill ts
+**Asignado:** (pendiente)
+**Rama git:** slot-0111/theme-defaults-dark
+
+## Que hacer
+default dark
+
+## AC
+- [ ] Implementar segun spec en panel-agentes.
+- [ ] Tests si aplica.
+- [ ] Commit + push rama slot-0111/theme-defaults-dark.
+- [ ] PR a main o merge si lineal.
+
+## Depende de: (ninguna salvo indicado)
