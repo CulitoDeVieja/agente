@@ -32,3 +32,10 @@ Si ya escribiste el log dentro del archivo antes de moverlo, el `git mv` lo arra
 - [ ] Esta tarea también termina en completado/ (no borrada).
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Patrón `git mv` ya en uso en este agente desde el primer commit del loop (ver historial: todos los commits muestran "rename pendiente => completado").
+- Esta tarea cerrada con `git mv` (cumple AC self-referencial).
+- Memoria interna actualizada para reforzar la regla.
+- AC ✅ (verificable en `git log --diff-filter=R`).
