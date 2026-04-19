@@ -13,3 +13,7 @@ Ciclo evolución. Investigar web sobre "snyk-free-tier" y guardar en `conocimien
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-snyk-free-tier.md
