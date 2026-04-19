@@ -36,8 +36,21 @@ done
 ```
 Nunca `git push --force`.
 
-## Regla 4 — Mover, no reescribir
-Una tarea que cambia de estado (`pendiente → en-curso → completado`) se **mueve** con `git mv`, no se borra y recrea. El historial git detecta el rename y evita conflictos.
+## Regla 4 — Mover, no reescribir (DURA)
+Una tarea que cambia de estado (`pendiente → en-curso → completado`) se **mueve** con `git mv`, no se borra y recrea.
+
+**PROHIBIDO:**
+- `rm tareas/*/archivo.md` (pierde el historial y el log).
+- `git rm` sin tener el nuevo archivo creado en otro path.
+
+**OBLIGATORIO:**
+```
+git mv tareas/en-curso/<archivo>.md tareas/completado/
+```
+
+Si el agente tiene el log en otro lado y no quiere duplicarlo, **al menos** debe mover el archivo (aunque sea vacío) al destino correcto. El orchestrator necesita ver la trazabilidad.
+
+**Auditoría recurrente:** Lupa detectó que auditor-ops viola esta regla. Sancionar = abrir tarea educativa.
 
 ## Regla 5 — Un commit + push por tarea (DURA)
 **Cada tarea terminada se sube inmediatamente. No se acumula.**
