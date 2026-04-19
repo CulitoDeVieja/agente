@@ -1,64 +1,60 @@
-# STATE — memoria global del sistema
+# STATE — snapshot actual
 
-**Última actualización:** 2026-04-19 · CELL! completo + AVISO leído — Builder VPS-2 sin cola
+**Última consolidación:** 2026-04-19 · Zeus (orchestrator) post-limpieza
 
 ## Agentes activos
 
-| Rol | Ubicación | Última señal | Pend | Comp |
-|---|---|---|---|---|
-| orchestrator | local | ✅ activo | 1 | 2 |
-| skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
-| builder | VPS-2 | ✅ CELL! completo (10 evo + 108 + AAA + AVISO) | 0 | 45 |
-| auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
-| scout | on-demand | — | — | — |
-| architect | on-demand | — | — | — |
-
-**Observación orchestrator:** skills-curator y auditor-ops reportaron señal pero no procesan tareas. Posible causa: no están loopeando efectivamente o el prompt del ciclo en sus VPS no busca tareas con su prefijo. Escalar si sigue 3 ciclos más así.
-
-## Proyectos activos
-
-| Proyecto | Repo | Fase | Agentes que lo tocan |
+| # | Rol | Host | Estado |
 |---|---|---|---|
-| panel-agentes | panel-agentes (https://github.com/CulitoDeVieja/panel-agentes) | Fase B ejecución | builder ✅ → auditor-ops pendiente |
+| 0 | Orchestrator / Zeus / Lupa | local | ✅ loop 1min |
+| 1 | Skills-Curator | VPS-1 | ✅ loop 1min |
+| 2 | Builder | VPS-2 | ✅ loop 1min |
+| 3 | Auditor-Ops | VPS-3 | ✅ loop 1min |
+| — | Architect (alias psique) | on-demand | activo |
+| — | Scout | on-demand | sin usar aún |
 
-## MODO MASTER activo
+## Proyecto activo
 
-**Tarea madre:** panel-agentes (app Tauri Windows)
+**panel-agentes** — app Tauri Windows · Fase B ~85%.
+- Repo: `github.com/CulitoDeVieja/panel-agentes`
+- Stack: Tauri 2 + React 18 + TS + Tailwind v4 + Rust
+- Mockup canónico: `planificacion/panel-agentes/mockup-visual-v4.html`
 
-### Fase A — Planificación (en curso)
+## Hitos
 
-| Sub-tarea | Rol | Estado |
+| # | Hito | Estado |
 |---|---|---|
-| architect-001, architect-002, architect-010 a 029 | architect | 21 pendientes (on-demand) |
-| skills-curator-002 a 029 | skills-curator | 24 pendientes |
-| builder-003 a 029 (planes) | builder | 21 completados ✅ |
-| auditor-ops-003 a 029 | auditor-ops | 24 pendientes |
-| orchestrator-002 (revisar + aprobar) | orchestrator | bloqueada por deps |
+| 1 | Repo + scaffold (27 archivos) | ✅ |
+| 2 | 6 tests vitest verdes | ✅ |
+| 3 | Audit estática PASA | ✅ |
+| 4 | Contradicciones Lupa → 3 fixes abiertos | 🔄 1 pendiente (builder-fix-001) |
+| 5 | Build Windows .msi | ⏳ requiere VPS Windows |
+| 6 | Release v0.1.0 | 🔒 bloqueado por #5 |
 
-### Fase B — Ejecución (bloqueada hasta aprobar Fase A)
+## Modos vigentes
 
-| Sub-tarea | Rol | Estado |
-|---|---|---|
-| builder-002 implementar panel-agentes | builder | ✅ completado — commit edf93b1 |
-| auditor-ops-002 audit panel-agentes | auditor-ops | 🔒 bloqueada por builder-002 |
+- **MASTER** panel-agentes · Fase A ✅ / Fase B ~85%
+- **CELL!** ✅ cerrado (60/60 evoluciones, curado en `conocimiento/INDICE.md`)
+- **EVOLUCION** permanente · cada 10 ciclos un agente investiga
+- **ALL PASS** activo · `~/.claude/settings.local.json` en los 4 hosts
 
-### Artefactos ya listos
+## Cola
 
-- `PLAN-MASTER-panel-agentes.md` — plan maestro con stack, wireframes, tipos.
-- `planificacion/panel-agentes/00-resumen.md` — aprobado.
-- `planificacion/panel-agentes/mockup-visual.html` — 2 pantallas en HTML standalone.
-- 4 manifests + 6 skills base (git-workflow, tareas-markdown, lazy-skill-loading, modo-master, anti-choques, skill-authoring).
+- Pendientes: 1 (builder-fix-001)
+- En curso: 2 (continuas del orchestrator)
+- Completadas: 400+
 
-### Próximo hito crítico
+## Qué sigue
 
-Destrabar skills-curator y auditor-ops para que procesen sus 48 tareas pendientes. Sin eso, Fase A no termina y Fase B sigue bloqueada.
+1. Builder toma fix-001 → cierra última contradicción.
+2. Owner dispara `cargo tauri build` en Windows.
+3. Lupa ejecuta `test-plan.md` completo.
+4. Gate OK → release v0.1.0.
 
-## Decisiones pendientes del owner
+## Skills base (todos cargan siempre)
 
-(ninguna bloqueante)
+`git-workflow`, `tareas-markdown`, `lazy-skill-loading`, `modo-master`, `anti-choques`, `fase-b-ejecucion`, `permisos-preaprobados`, `evolucion`, `all-pass`.
 
-## Reglas de escritura
+## Reglas vigentes
 
-- Solo el **orchestrator** edita `STATE.md`.
-- Se actualiza cada vez que el orchestrator detecta cambio relevante en su loop.
-- No es log histórico — es snapshot del presente. El log vive en `tareas/completado/`.
+- Namespace por rol · 1 commit por tarea · Silencio > ruido · Dependencias en `## Depende de:` · Test antes de OK.
