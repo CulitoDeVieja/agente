@@ -15,3 +15,11 @@ Documentar plan de "verificar-sin-console-logs" en `planificacion/panel-agentes/
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-verificar-sin-console-logs.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
