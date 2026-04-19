@@ -10,3 +10,7 @@ Investigar "github-actions-matrix-windows", guardar en `conocimiento/auditor-ops
 - [ ] Archivo + fuente real + aplicabilidad.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-github-actions-matrix-windows.md
