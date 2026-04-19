@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Planilla de tareas · Panel Agentes</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{background:#07090e;color:#e7ebf2;padding:20px}
+h1{font-size:1.5rem;margin-bottom:6px}
+.sub{color:#8791a4;margin-bottom:20px;font-size:0.85rem}
+.tabs{display:flex;gap:4px;border-bottom:1px solid #27324a;margin-bottom:16px}
+.tab{padding:10px 18px;cursor:pointer;color:#8791a4;font-size:0.9rem;border-bottom:2px solid transparent}
+.tab.active{color:#e7ebf2;border-bottom-color:#4c9aff}
+.panel{display:none}
+.panel.active{display:block}
+.summary{background:#10151f;border:1px solid #27324a;border-radius:8px;padding:14px;margin-bottom:12px;display:flex;gap:20px}
+.summary .s{flex:1}
+.summary .s .n{font-size:1.6rem;font-weight:700}
+.summary .s .l{font-size:0.7rem;color:#8791a4;text-transform:uppercase}
+.summary .s.pend .n{color:#4c9aff}
+.summary .s.curr .n{color:#f59e0b}
+.summary .s.done .n{color:#22c55e}
+table{width:100%;border-collapse:collapse;background:#10151f;border-radius:8px;overflow:hidden}
+th{background:#181f2c;text-align:left;padding:10px;font-size:0.75rem;text-transform:uppercase;color:#8791a4;letter-spacing:0.5px}
+td{padding:8px 10px;border-top:1px solid #181f2c;font-size:0.85rem}
+tr:hover td{background:#181f2c}
+.pill{padding:2px 8px;border-radius:10px;font-size:0.7rem;font-weight:600}
+.pill.pend{background:rgba(76,154,255,0.2);color:#4c9aff}
+.pill.curr{background:rgba(245,158,11,0.2);color:#f59e0b}
+.pill.done{background:rgba(34,197,94,0.2);color:#22c55e}
+.num{color:#4c9aff;font-weight:700}
+</style>
+</head>
+<body>
+<h1>Planilla de tareas — Panel Agentes</h1>
+<div class="sub">Árbol de desarrollo · 100 tareas por agente · MODO MASTER</div>
+<div class="tabs">
+<div class="tab active" onclick="show('orchestrator',this)">#0 Orchestrator</div>
+<div class="tab " onclick="show('skills-curator',this)">#1 Skills-Curator</div>
+<div class="tab " onclick="show('builder',this)">#2 Builder</div>
+<div class="tab " onclick="show('auditor-ops',this)">#3 Auditor+Ops</div>
+<div class="tab " onclick="show('architect',this)">— Architect</div>
+</div>
+<div class="panel active" id="p-orchestrator">
+<div class="summary">
+<div class="s"><div class="n">5</div><div class="l">Total</div></div>
+<div class="s pend"><div class="n">0</div><div class="l">Pendientes</div></div>
+<div class="s curr"><div class="n">1</div><div class="l">En curso</div></div>
+<div class="s done"><div class="n">4</div><div class="l">Completadas</div></div>
+</div>
+<table><thead><tr><th>#</th><th>Tarea</th><th>Estado</th></tr></thead><tbody>
+<tr><td><span class="num">005</span></td><td>fase-b-unificar</td><td><span class="pill curr">en-curso</span></td></tr>
+<tr><td><span class="num">001</span></td><td>inicializar-sistema</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">002</span></td><td>revisar-aprobar-panel-agentes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">003</span></td><td>limpiar-tareas-viejas</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">004</span></td><td>mockup-final-post-planificacion</td><td><span class="pill done">completado</span></td></tr>
+</tbody></table></div>
+<div class="panel " id="p-skills-curator">
+<div class="summary">
+<div class="s"><div class="n">101</div><div class="l">Total</div></div>
+<div class="s pend"><div class="n">0</div><div class="l">Pendientes</div></div>
+<div class="s curr"><div class="n">0</div><div class="l">En curso</div></div>
+<div class="s done"><div class="n">101</div><div class="l">Completadas</div></div>
+</div>
+<table><thead><tr><th>#</th><th>Tarea</th><th>Estado</th></tr></thead><tbody>
+<tr><td><span class="num">001</span></td><td>reportar-senal</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">002</span></td><td>skill-tauri-architecture</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">003</span></td><td>llenar-02-skills</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">004</span></td><td>crear-4-skills-panel</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">010</span></td><td>tauri-rust-commands-ipc</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">011</span></td><td>react-router-setup</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">012</span></td><td>react-testing-vitest</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">013</span></td><td>tauri-filesystem-access</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">014</span></td><td>tauri-run-cli-command</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">015</span></td><td>tailwind-dark-mode</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">016</span></td><td>date-fns-usage</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">017</span></td><td>react-hooks-patterns</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">018</span></td><td>typescript-strict-mode</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">019</span></td><td>error-boundary-pattern</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">020</span></td><td>react-suspense-basics</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">021</span></td><td>zustand-vs-context-decision</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">022</span></td><td>vite-config-tauri</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">023</span></td><td>rust-serde-json</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">024</span></td><td>github-releases-workflow</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">025</span></td><td>semver-conventions</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">026</span></td><td>code-splitting-vite</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">027</span></td><td>eslint-prettier-setup</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">028</span></td><td>tauri-updater-future</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">029</span></td><td>logging-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">030</span></td><td>tauri-notifications</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">031</span></td><td>tauri-system-tray</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">032</span></td><td>tauri-auto-start</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">033</span></td><td>tauri-window-management</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">034</span></td><td>tauri-menu-native</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">035</span></td><td>tauri-shell-open</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">036</span></td><td>tauri-global-shortcut</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">037</span></td><td>react-context-splitting</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">038</span></td><td>react-query-basics</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">039</span></td><td>react-virtual-list</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">040</span></td><td>react-dnd-kit</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">041</span></td><td>react-hot-toast</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">042</span></td><td>react-hotkeys-hook</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">043</span></td><td>tailwind-custom-theme</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">044</span></td><td>tailwind-plugins</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">045</span></td><td>tailwind-animations</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">046</span></td><td>tailwind-typography-plugin</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">047</span></td><td>typescript-generics</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">048</span></td><td>typescript-utility-types</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">049</span></td><td>zod-schema-validation</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">050</span></td><td>yup-vs-zod</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">051</span></td><td>fetch-vs-axios</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">052</span></td><td>tanstack-query-setup</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">053</span></td><td>websockets-rust-tauri</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">054</span></td><td>polling-vs-push</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">055</span></td><td>sqlite-in-tauri</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">056</span></td><td>json-file-storage</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">057</span></td><td>logging-winston</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">058</span></td><td>logging-pino</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">059</span></td><td>test-e2e-playwright</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">060</span></td><td>test-rust-cargo</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">061</span></td><td>ci-github-actions</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">062</span></td><td>release-please</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">063</span></td><td>semantic-release</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">064</span></td><td>changelog-generation</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">065</span></td><td>code-coverage-istanbul</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">066</span></td><td>vitest-coverage</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">067</span></td><td>bundle-analyzer</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">068</span></td><td>lighthouse-desktop</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">069</span></td><td>figma-to-react</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">070</span></td><td>storybook-basics</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">071</span></td><td>i18n-react-intl</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">072</span></td><td>accessibility-axe</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">073</span></td><td>contrast-checker</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">074</span></td><td>error-tracking-sentry</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">075</span></td><td>analytics-privacy-first</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">076</span></td><td>rust-tokio-async</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">077</span></td><td>rust-error-thiserror</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">078</span></td><td>rust-tracing</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">079</span></td><td>github-api-rust</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">100</span></td><td>skill-local-cache-invalidation</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">101</span></td><td>skill-tauri-permissions-config</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">102</span></td><td>skill-tauri-csp-hardening</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">103</span></td><td>skill-rust-panic-recovery</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">104</span></td><td>consolidar-INDEX-por-categorias</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">105</span></td><td>roadmap-skills-v020</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">106</span></td><td>push-por-tarea</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">80</span></td><td>revisar-skills-030-079-calidad</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">81</span></td><td>skill-compose-panel-layout</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">82</span></td><td>skill-tauri-v2-breaking-changes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">83</span></td><td>skill-state-persistence</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">84</span></td><td>skill-virtualization-tasks-list</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">85</span></td><td>skill-render-markdown-safely</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">86</span></td><td>skill-timer-cleanup-react</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">87</span></td><td>skill-abort-signal-fetch</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">88</span></td><td>skill-optimistic-updates</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">89</span></td><td>skill-debounce-throttle</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">90</span></td><td>skill-memoize-heavy-computations</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">91</span></td><td>skill-accessibility-keyboard</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">92</span></td><td>skill-screen-reader-aria</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">93</span></td><td>skill-error-message-copy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">94</span></td><td>skill-empty-state-copy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">95</span></td><td>skill-loading-state-copy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">96</span></td><td>skill-success-feedback-copy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">97</span></td><td>skill-notification-levels</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">98</span></td><td>skill-confirm-destructive-action</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">99</span></td><td>skill-undo-redo-pattern</td><td><span class="pill done">completado</span></td></tr>
+</tbody></table></div>
+<div class="panel " id="p-builder">
+<div class="summary">
+<div class="s"><div class="n">101</div><div class="l">Total</div></div>
+<div class="s pend"><div class="n">0</div><div class="l">Pendientes</div></div>
+<div class="s curr"><div class="n">0</div><div class="l">En curso</div></div>
+<div class="s done"><div class="n">101</div><div class="l">Completadas</div></div>
+</div>
+<table><thead><tr><th>#</th><th>Tarea</th><th>Estado</th></tr></thead><tbody>
+<tr><td><span class="num">001</span></td><td>reportar-senal</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">002</span></td><td>implementar-panel-agentes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">003</span></td><td>llenar-03-implementacion</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">010</span></td><td>scaffold-repo</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">011</span></td><td>setup-vite-react-ts</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">012</span></td><td>setup-tauri2</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">013</span></td><td>setup-tailwind</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">014</span></td><td>estructura-carpetas</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">015</span></td><td>rust-command-list-tasks</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">016</span></td><td>rust-command-read-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">017</span></td><td>rust-command-read-task</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">018</span></td><td>rust-command-git-pull</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">019</span></td><td>tipos-ts-base</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">020</span></td><td>parser-markdown-task</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">021</span></td><td>context-global-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">022</span></td><td>router-app</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">023</span></td><td>componente-agent-card</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">024</span></td><td>componente-dashboard</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">025</span></td><td>componente-agent-detail</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">026</span></td><td>componente-task-list</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">027</span></td><td>componente-refresh-button</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">028</span></td><td>hook-use-repo-data</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">029</span></td><td>error-boundary-component</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">030</span></td><td>componente-sidebar</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">031</span></td><td>componente-statusbar</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">032</span></td><td>componente-breadcrumb</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">033</span></td><td>componente-progress-bar</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">034</span></td><td>componente-task-card</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">035</span></td><td>componente-notification-panel</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">036</span></td><td>componente-toast</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">037</span></td><td>componente-settings-modal</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">038</span></td><td>componente-help-overlay</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">039</span></td><td>componente-loading-skeleton</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">040</span></td><td>componente-empty-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">041</span></td><td>componente-error-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">042</span></td><td>componente-refresh-spinner</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">043</span></td><td>hook-use-agents</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">044</span></td><td>hook-use-tasks</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">045</span></td><td>hook-use-notifications</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">046</span></td><td>hook-use-polling</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">047</span></td><td>hook-use-git-status</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">048</span></td><td>hook-use-errors</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">049</span></td><td>service-fs-reader</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">050</span></td><td>service-git-runner</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">051</span></td><td>service-task-parser</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">052</span></td><td>service-notification-manager</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">053</span></td><td>service-config-store</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">054</span></td><td>rust-command-git-log</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">055</span></td><td>rust-command-git-status</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">056</span></td><td>rust-command-list-agents</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">057</span></td><td>rust-command-watch-fs</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">058</span></td><td>rust-command-run-ciclo-sh</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">059</span></td><td>rust-command-read-config</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">060</span></td><td>rust-command-write-config</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">061</span></td><td>rust-command-exit-app</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">062</span></td><td>test-unit-parser</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">063</span></td><td>test-unit-hook-use-tasks</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">064</span></td><td>test-unit-hook-use-polling</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">065</span></td><td>test-integration-git</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">066</span></td><td>test-e2e-app-arranca</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">067</span></td><td>test-e2e-refresh-funciona</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">068</span></td><td>build-debug-local</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">069</span></td><td>build-release-windows</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">070</span></td><td>build-cross-platform-future</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">071</span></td><td>package-msi</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">072</span></td><td>package-exe-portable</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">073</span></td><td>sign-executable-windows</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">074</span></td><td>app-icon-design</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">075</span></td><td>splash-screen</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">076</span></td><td>error-boundary-global</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">077</span></td><td>crash-reporter</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">078</span></td><td>auto-updater-setup</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">079</span></td><td>tag-release-v010</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">100</span></td><td>service-cache-layer</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">101</span></td><td>service-logger</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">102</span></td><td>rust-command-open-external-url</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">103</span></td><td>rust-command-show-notification</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">104</span></td><td>rust-command-list-logs</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">105</span></td><td>test-unit-services</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">106</span></td><td>test-accessibility-basic</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">107</span></td><td>estudiar-plan-completo</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">80</span></td><td>revisar-tareas-plan-consistencia</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">81</span></td><td>integrar-plan-completo-arquitectura</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">82</span></td><td>componente-login-futuro</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">83</span></td><td>componente-header</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">84</span></td><td>componente-footer</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">85</span></td><td>componente-search-bar</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">86</span></td><td>componente-filter-chips</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">87</span></td><td>componente-sort-dropdown</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">88</span></td><td>componente-task-detail-modal</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">89</span></td><td>componente-agent-status-badge</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">90</span></td><td>componente-error-toast</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">91</span></td><td>componente-success-toast</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">92</span></td><td>componente-confirm-dialog</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">93</span></td><td>componente-keyboard-shortcuts-help</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">94</span></td><td>componente-release-notes-viewer</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">95</span></td><td>hook-use-cmd-palette</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">96</span></td><td>hook-use-theme</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">97</span></td><td>hook-use-shortcut</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">98</span></td><td>hook-use-window-size</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">99</span></td><td>hook-use-online-status</td><td><span class="pill done">completado</span></td></tr>
+</tbody></table></div>
+<div class="panel " id="p-auditor-ops">
+<div class="summary">
+<div class="s"><div class="n">100</div><div class="l">Total</div></div>
+<div class="s pend"><div class="n">0</div><div class="l">Pendientes</div></div>
+<div class="s curr"><div class="n">1</div><div class="l">En curso</div></div>
+<div class="s done"><div class="n">99</div><div class="l">Completadas</div></div>
+</div>
+<table><thead><tr><th>#</th><th>Tarea</th><th>Estado</th></tr></thead><tbody>
+<tr><td><span class="num">002</span></td><td>audit-panel-agentes</td><td><span class="pill curr">en-curso</span></td></tr>
+<tr><td><span class="num">001</span></td><td>reportar-senal</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">003</span></td><td>llenar-04-auditoria</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">004</span></td><td>preparar-repo-panel-agentes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">010</span></td><td>checklist-ac-architect</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">011</span></td><td>checklist-ac-builder</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">012</span></td><td>grep-credenciales-hardcoded</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">013</span></td><td>grep-todos-fixmes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">014</span></td><td>verificar-tests-pasan</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">015</span></td><td>medir-tamano-bundle</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">016</span></td><td>medir-tiempo-arranque</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">017</span></td><td>verificar-sin-console-logs</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">018</span></td><td>verificar-tipos-estrictos</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">019</span></td><td>verificar-sin-any-ts</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">020</span></td><td>preparar-repo-github</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">021</span></td><td>configurar-gitignore</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">022</span></td><td>configurar-ci-opcional</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">023</span></td><td>release-workflow-draft</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">024</span></td><td>build-final-windows</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">025</span></td><td>upload-release-v0-1-0</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">026</span></td><td>smoke-test-local</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">027</span></td><td>escribir-notas-release</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">028</span></td><td>notificar-owner</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">029</span></td><td>plan-rollback</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">030</span></td><td>audit-a11y</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">031</span></td><td>audit-performance-lighthouse</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">032</span></td><td>audit-bundle-size-final</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">033</span></td><td>audit-tiempo-arranque-final</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">034</span></td><td>audit-memoria-uso</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">035</span></td><td>audit-cpu-uso</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">036</span></td><td>audit-security-deps</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">037</span></td><td>audit-secrets-scan</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">038</span></td><td>audit-licenses-spdx</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">039</span></td><td>audit-unused-deps</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">040</span></td><td>audit-ts-strict</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">041</span></td><td>audit-eslint-warnings</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">042</span></td><td>audit-react-keys</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">043</span></td><td>audit-props-types</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">044</span></td><td>audit-tailwind-unused</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">045</span></td><td>audit-console-logs</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">046</span></td><td>audit-error-boundaries-cobertura</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">047</span></td><td>audit-loading-states-cobertura</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">048</span></td><td>audit-a11y-aria-labels</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">049</span></td><td>audit-responsive-width-min</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">050</span></td><td>audit-dark-mode-contrast</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">051</span></td><td>audit-keyboard-navigation</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">052</span></td><td>audit-focus-visible</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">053</span></td><td>deploy-preparar-gh-release</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">054</span></td><td>deploy-upload-binarios</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">055</span></td><td>deploy-escribir-release-notes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">056</span></td><td>deploy-tag-v010</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">057</span></td><td>deploy-notificar-owner</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">058</span></td><td>deploy-rollback-plan-final</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">059</span></td><td>smoke-test-app-abre</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">060</span></td><td>smoke-test-refresca</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">061</span></td><td>smoke-test-detalle-abre</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">062</span></td><td>smoke-test-notifs</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">063</span></td><td>smoke-test-cierra-limpio</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">064</span></td><td>smoke-test-reopens-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">065</span></td><td>monitoreo-logs-primera-hora</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">066</span></td><td>monitoreo-crash-reports</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">067</span></td><td>soporte-recibir-feedback</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">068</span></td><td>soporte-issue-template</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">069</span></td><td>documentacion-readme-panel</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">070</span></td><td>documentacion-install-guide</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">071</span></td><td>documentacion-troubleshooting</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">072</span></td><td>documentacion-screenshots</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">073</span></td><td>plan-migracion-web-future</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">074</span></td><td>plan-pwa-transition</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">075</span></td><td>plan-sync-multi-device</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">076</span></td><td>plan-cloud-backup-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">077</span></td><td>audit-comparar-mockup-vs-impl</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">078</span></td><td>audit-comparar-spec-vs-impl</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">079</span></td><td>ops-release-v010-final</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">100</span></td><td>doc-errores-comunes-con-fix</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">101</span></td><td>audit-readme-screenshots-actualizados</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">102</span></td><td>audit-release-notes-claras</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">103</span></td><td>monitoreo-retry-patterns-ciclo</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">104</span></td><td>audit-idempotencia-ciclo</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">105</span></td><td>ops-release-v011-parche</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">80</span></td><td>audit-plan-builder-consistencia</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">81</span></td><td>audit-plan-architect-cubre-features</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">82</span></td><td>audit-skills-cubren-builder-plan</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">83</span></td><td>smoke-test-windows7-compat</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">84</span></td><td>smoke-test-windows11-compat</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">85</span></td><td>smoke-test-4k-display</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">86</span></td><td>smoke-test-high-dpi</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">87</span></td><td>smoke-test-multiple-monitors</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">88</span></td><td>audit-antivirus-false-positives</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">89</span></td><td>audit-windows-defender-smartscreen</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">90</span></td><td>deploy-code-signing-cert</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">91</span></td><td>deploy-winget-manifest</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">92</span></td><td>deploy-msi-scope-peruser</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">93</span></td><td>deploy-uninstaller-works</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">94</span></td><td>verificar-actualizaciones-no-pierden-config</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">95</span></td><td>plan-telemetria-opt-in</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">96</span></td><td>plan-feedback-in-app</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">97</span></td><td>doc-faq-comunes</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">98</span></td><td>doc-keybindings-cheatsheet</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">99</span></td><td>doc-que-pasa-si-repo-no-existe</td><td><span class="pill done">completado</span></td></tr>
+</tbody></table></div>
+<div class="panel " id="p-architect">
+<div class="summary">
+<div class="s"><div class="n">72</div><div class="l">Total</div></div>
+<div class="s pend"><div class="n">0</div><div class="l">Pendientes</div></div>
+<div class="s curr"><div class="n">0</div><div class="l">En curso</div></div>
+<div class="s done"><div class="n">72</div><div class="l">Completadas</div></div>
+</div>
+<table><thead><tr><th>#</th><th>Tarea</th><th>Estado</th></tr></thead><tbody>
+<tr><td><span class="num">001</span></td><td>panel-agentes-spec</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">002</span></td><td>llenar-01-arquitectura</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">010</span></td><td>arbol-componentes-react</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">011</span></td><td>rutas-app</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">012</span></td><td>state-management-decision</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">013</span></td><td>tipos-ts-completos</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">014</span></td><td>rust-commands-signatures</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">015</span></td><td>error-handling-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">016</span></td><td>performance-memoization</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">017</span></td><td>estructura-tailwind</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">018</span></td><td>accesibilidad-a11y</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">019</span></td><td>theme-dark-light</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">020</span></td><td>responsive-desktop</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">021</span></td><td>keyboard-shortcuts</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">022</span></td><td>loading-states</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">023</span></td><td>error-states</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">024</span></td><td>empty-states</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">025</span></td><td>animations-transitions</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">026</span></td><td>testing-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">027</span></td><td>bundle-size-targets</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">028</span></td><td>versioning-releases</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">029</span></td><td>naming-conventions</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">030</span></td><td>ux-microinteracciones</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">031</span></td><td>ux-animaciones-feedback</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">032</span></td><td>data-flow-lifecycle</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">033</span></td><td>loading-patterns</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">034</span></td><td>empty-states-por-vista</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">035</span></td><td>keyboard-shortcuts-spec</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">036</span></td><td>design-tokens</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">037</span></td><td>paleta-colores</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">038</span></td><td>tipografia-scale</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">039</span></td><td>spacing-grid</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">040</span></td><td>iconografia</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">041</span></td><td>tooltips-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">042</span></td><td>modal-dialog-patterns</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">043</span></td><td>form-validation</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">044</span></td><td>date-time-formatting</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">045</span></td><td>i18n-future</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">046</span></td><td>print-styles</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">047</span></td><td>export-functions</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">048</span></td><td>search-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">049</span></td><td>filter-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">050</span></td><td>sort-strategy</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">051</span></td><td>pagination-vs-infinite</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">052</span></td><td>websocket-vs-polling</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">053</span></td><td>offline-mode</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">054</span></td><td>config-persistence</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">055</span></td><td>first-run-experience</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">056</span></td><td>settings-page</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">057</span></td><td>about-page</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">058</span></td><td>help-overlay</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">059</span></td><td>contextual-help</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">060</span></td><td>onboarding-tour</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">061</span></td><td>dashboard-customization</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">062</span></td><td>card-collapsible</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">063</span></td><td>drag-and-drop</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">064</span></td><td>multi-select</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">065</span></td><td>bulk-actions</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">066</span></td><td>drill-down-depth-max</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">067</span></td><td>error-reporting-ui</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">068</span></td><td>cmd-palette</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">069</span></td><td>global-search</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">070</span></td><td>breadcrumbs-design</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">071</span></td><td>recently-viewed</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">072</span></td><td>pinned-items</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">073</span></td><td>data-refresh-indicator</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">074</span></td><td>offline-indicator</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">075</span></td><td>version-update-indicator</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">076</span></td><td>dirty-state</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">077</span></td><td>concurrent-edit-detection</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">078</span></td><td>url-state-deep-link</td><td><span class="pill done">completado</span></td></tr>
+<tr><td><span class="num">079</span></td><td>focus-management</td><td><span class="pill done">completado</span></td></tr>
+</tbody></table></div>
+<script>
+function show(rol, el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('p-'+rol).classList.add('active');
+}
+</script>
+</body>
+</html>
