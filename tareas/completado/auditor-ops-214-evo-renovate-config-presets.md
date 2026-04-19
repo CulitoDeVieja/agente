@@ -10,3 +10,7 @@ Investigar "renovate-config-presets", guardar en `conocimiento/auditor-ops/2026-
 - [ ] Archivo + fuente real + aplicabilidad.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-renovate-config-presets.md
