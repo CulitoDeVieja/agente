@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel Agentes — Mockup visual</title>
+<style>
+:root {
+  --bg: #0f1419;
+  --panel: #1a2130;
+  --border: #2a3344;
+  --text: #e4e7eb;
+  --muted: #8a9099;
+  --accent: #4c9aff;
+  --green: #27ae60;
+  --orange: #f39c12;
+  --red: #c0392b;
+  --purple: #8e44ad;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+body { background: #0a0d12; color: var(--text); padding: 2rem; }
+.note { color: var(--muted); text-align: center; margin-bottom: 2rem; font-size: 0.9rem; }
+.window {
+  max-width: 1100px; margin: 2rem auto; background: var(--bg);
+  border-radius: 10px; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+.titlebar {
+  background: #1a1f2e; padding: 10px 14px;
+  display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.titlebar .dots { display: flex; gap: 6px; }
+.titlebar .dot { width: 12px; height: 12px; border-radius: 50%; background: #444; }
+.titlebar .title { font-size: 0.85rem; color: var(--muted); }
+.content { padding: 1.5rem; }
+h1 { font-size: 1.2rem; display: flex; justify-content: space-between; align-items: center; }
+h1 .badges { display: flex; gap: 8px; font-size: 0.75rem; font-weight: normal; }
+.badge {
+  padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 6px;
+}
+.badge.master { background: rgba(142, 68, 173, 0.2); color: #c39bd3; border: 1px solid var(--purple); }
+.badge.refresh { background: var(--accent); color: white; cursor: pointer; }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1rem; cursor: pointer;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--accent); }
+.card .rol { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.card .title { font-size: 1.05rem; font-weight: 600; margin-top: 4px; }
+.card .status {
+  margin-top: 0.8rem; font-size: 0.8rem;
+  display: flex; align-items: center; gap: 6px;
+}
+.status.ok::before { content: "●"; color: var(--green); }
+.status.wait::before { content: "●"; color: var(--orange); }
+.counts { margin-top: 0.8rem; display: flex; justify-content: space-between; font-size: 0.85rem; }
+.counts .c { text-align: center; }
+.counts .num { font-size: 1.4rem; font-weight: bold; display: block; }
+.counts .num.p { color: var(--accent); }
+.counts .num.e { color: var(--orange); }
+.counts .num.c { color: var(--green); }
+.counts .lbl { color: var(--muted); font-size: 0.7rem; }
+
+.footer-bar {
+  padding: 10px 1.5rem; background: #0a0d12; border-top: 1px solid var(--border);
+  font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between;
+}
+
+/* Detalle */
+.detail-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.back { background: var(--panel); border: 1px solid var(--border); color: var(--text);
+  padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; }
+.section { margin-top: 1.5rem; }
+.section h3 { font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.6rem; }
+.task { background: var(--panel); border-left: 3px solid var(--border);
+  padding: 10px 14px; margin-bottom: 6px; border-radius: 0 6px 6px 0;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.task.pend { border-left-color: var(--accent); }
+.task.curr { border-left-color: var(--orange); }
+.task.done { border-left-color: var(--green); opacity: 0.7; }
+.task.blocked { border-left-color: var(--red); }
+.task .tname { font-size: 0.9rem; }
+.task .tmeta { font-size: 0.75rem; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="note">Mockup estático — Panel Agentes v0.1 — 2 pantallas</div>
+
+<!-- ============ PANTALLA 1: DASHBOARD ============ -->
+<div class="window">
+  <div class="titlebar">
+    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="title">Panel Agentes</div>
+  </div>
+  <div class="content">
+    <h1>
+      Dashboard
+      <div class="badges">
+        <span class="badge master">● MODO MASTER · panel-agentes</span>
+        <span class="badge refresh">↻ Refrescar</span>
+      </div>
+    </h1>
+
+    <div class="grid">
+      <div class="card">
+        <div class="rol">Orchestrator</div>
+        <div class="title">Local</div>
+        <div class="status ok">activo · 2026-04-19 14:32</div>
+        <div class="counts">
+          <div class="c"><span class="num p">1</span><span class="lbl">pendiente</span></div>
+          <div class="c"><span class="num e">0</span><span class="lbl">en curso</span></div>
+          <div class="c"><span class="num c">2</span><span class="lbl">completadas</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="rol">Skills-Curator</div>
+        <div class="title">VPS-1</div>
+        <div class="status ok">activo · 2026-04-19 14:28</div>
+        <div class="counts">
+          <div class="c"><span class="num p">23</span><span class="lbl">pendiente</span></div>
+          <div class="c"><span class="num e">1</span><span class="lbl">en curso</span></div>
+          <div class="c"><span class="num c">0</span><span class="lbl">completadas</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="rol">Builder</div>
+        <div class="title">VPS-2</div>
+        <div class="status ok">activo · 2026-04-19 14:30</div>
+        <div class="counts">
+          <div class="c"><span class="num p">21</span><span class="lbl">pendiente</span></div>
+          <div class="c"><span class="num e">0</span><span class="lbl">en curso</span></div>
+          <div class="c"><span class="num c">2</span><span class="lbl">completadas</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="rol">Auditor + Ops</div>
+        <div class="title">VPS-3</div>
+        <div class="status wait">esperando · sin señal</div>
+        <div class="counts">
+          <div class="c"><span class="num p">23</span><span class="lbl">pendiente</span></div>
+          <div class="c"><span class="num e">1</span><span class="lbl">en curso</span></div>
+          <div class="c"><span class="num c">0</span><span class="lbl">completadas</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>C:/Users/Tony/AppData/Local/Temp/agente-repo</span>
+    <span>Última sincronización: hace 42 segundos</span>
+  </div>
+</div>
+
+<!-- ============ PANTALLA 2: DETALLE BUILDER ============ -->
+<div class="window">
+  <div class="titlebar">
+    <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div class="title">Panel Agentes · Builder</div>
+  </div>
+  <div class="content">
+    <div class="detail-head">
+      <button class="back">← Dashboard</button>
+      <h1>Builder <span style="color: var(--muted); font-weight: normal; font-size: 0.9rem;">· VPS-2 · activo</span></h1>
+    </div>
+
+    <div class="section">
+      <h3>Pendientes (21)</h3>
+      <div class="task pend"><span class="tname">builder-011 · setup-vite-react-ts</span><span class="tmeta">media</span></div>
+      <div class="task pend"><span class="tname">builder-012 · setup-tauri2</span><span class="tmeta">media</span></div>
+      <div class="task blocked"><span class="tname">builder-002 · implementar-panel-agentes</span><span class="tmeta">🔒 bloqueada · espera architect-001 + skills-curator-002</span></div>
+      <div class="task pend"><span class="tname">builder-013 · setup-tailwind</span><span class="tmeta">media</span></div>
+      <div class="task pend"><span class="tname">builder-014 · estructura-carpetas</span><span class="tmeta">media</span></div>
+      <div style="color: var(--muted); font-size: 0.8rem; margin-top: 6px;">... 16 más</div>
+    </div>
+
+    <div class="section">
+      <h3>En curso (0)</h3>
+      <div style="color: var(--muted); font-size: 0.85rem;">(ninguna)</div>
+    </div>
+
+    <div class="section">
+      <h3>Últimas 10 completadas</h3>
+      <div class="task done"><span class="tname">builder-010 · scaffold-repo</span><span class="tmeta">2026-04-19 14:22</span></div>
+      <div class="task done"><span class="tname">builder-001 · reportar-senal</span><span class="tmeta">2026-04-19 13:05</span></div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>21 pendientes · 0 en curso · 2 completadas</span>
+    <span>↻</span>
+  </div>
+</div>
+
+</body>
+</html>
