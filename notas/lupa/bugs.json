@@ -3,11 +3,11 @@
   "updated": "2026-04-19",
   "curator": "lupa",
   "resumen": {
-    "total": 16,
-    "cerrados": 15,
-    "abiertos": 1,
+    "total": 18,
+    "cerrados": 16,
+    "abiertos": 2,
     "criticos_abiertos": 0,
-    "altos_abiertos": 0
+    "altos_abiertos": 1
   },
   "bugs": [
     { "id": "LUPA-001", "titulo": "list_tasks usa rol: String con 'all' mágico", "severidad": "media", "estado": "cerrado", "resuelto_en": "commit 30b8f40", "fecha_cierre": "2026-04-19" },
@@ -25,6 +25,8 @@
     { "id": "LUPA-013", "titulo": "repo_path default Windows-only", "severidad": "media", "estado": "cerrado", "resuelto_en": "dirs::data_local_dir() cross-platform commit 70159ac", "fecha_cierre": "2026-04-19" },
     { "id": "LUPA-014", "titulo": "Falta vitest.config con jsdom", "severidad": "media", "estado": "cerrado", "resuelto_en": "vitest.config.ts creado commit 70159ac", "fecha_cierre": "2026-04-19" },
     { "id": "LUPA-015", "titulo": "panel-agentes sin CI", "severidad": "media", "estado": "cerrado", "resuelto_en": ".github/workflows/ci.yml creado commit 520b70e", "fecha_cierre": "2026-04-19" },
-    { "id": "LUPA-016", "titulo": "CI rust-check job falla: cargo fmt --check (commands.rs sin formatear)", "severidad": "media", "estado": "abierto", "detectado_por": "auditor-ops", "fuente": "CI run 24635187055 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-011-rustfmt-commands-rs", "ubicacion": "src-tauri/src/commands.rs (líneas 34, 43, 104, 111, 117, 143)" }
+    { "id": "LUPA-016", "titulo": "CI rust-check job falla: cargo fmt --check (commands.rs sin formatear)", "severidad": "media", "estado": "cerrado", "detectado_por": "auditor-ops", "fuente": "CI run 24635187055 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-011-rustfmt-commands-rs", "resuelto_en": "panel-agentes commit 280e5e8 (cargo fmt aplicado)", "fecha_cierre": "2026-04-19" },
+    { "id": "LUPA-017", "titulo": "tauri::generate_context! panicked — icon.png no es RGBA", "severidad": "alta", "estado": "abierto", "detectado_por": "auditor-ops", "fuente": "CI run 24635314737 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-012-icon-not-rgba", "ubicacion": "src-tauri/icons/icon.png" },
+    { "id": "LUPA-018", "titulo": "Clippy error: unused import std::path::Path", "severidad": "baja", "estado": "abierto", "detectado_por": "auditor-ops", "fuente": "CI run 24635314737 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-013-clippy-unused-import", "ubicacion": "src-tauri/src/parser.rs:2" }
   ]
 }
