@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Panel Agentes v3 FINAL — Mockup de referencia</title>
+<style>
+/* ============================================================
+   PANEL AGENTES · v3 FINAL
+   Mockup de referencia para que builder implemente 1:1.
+   Orden: variables → reset → layout → componentes → utilidades.
+   ============================================================ */
+
+/* ---------- 1. VARIABLES ---------- */
+:root {
+  /* Paleta oscura (tema default) */
+  --bg-app:       #07090e;
+  --bg-panel:    #10151f;
+  --bg-surface: #181f2c;
+  --bg-hover:   #1e2738;
+  --border:      #27324a;
+  --border-strong: #3a4560;
+  --text:        #e7ebf2;
+  --text-muted: #8791a4;
+  --text-dim:   #5c6577;
+
+  /* Semánticos */
+  --accent:      #4c9aff;
+  --accent-soft: rgba(76, 154, 255, 0.15);
+  --green:       #22c55e;
+  --orange:      #f59e0b;
+  --red:         #ef4444;
+  --purple:      #a78bfa;
+
+  /* Tipografía */
+  --fs-xs: 0.7rem; --fs-sm: 0.8rem; --fs-md: 0.9rem; --fs-lg: 1rem;
+  --fs-xl: 1.3rem; --fs-xxl: 1.6rem;
+
+  /* Espacios */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 24px; --sp-6: 32px;
+
+  /* Radios + sombras */
+  --r-sm: 4px; --r-md: 8px; --r-lg: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+/* ---------- 2. RESET ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+html, body { height: 100vh; overflow: hidden; }
+body { background: var(--bg-app); color: var(--text); font-size: var(--fs-md); }
+button { background: none; border: none; color: inherit; cursor: pointer; font: inherit; }
+input, textarea, select { background: var(--bg-surface); color: var(--text); border: 1px solid var(--border); border-radius: var(--r-sm); padding: 6px 10px; font: inherit; }
+input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+kbd { background: var(--bg-surface); border: 1px solid var(--border); padding: 1px 6px; border-radius: 3px; font-family: monospace; font-size: var(--fs-xs); }
+
+/* ---------- 3. LAYOUT PRINCIPAL ---------- */
+.app {
+  display: grid;
+  grid-template-columns: 260px 1fr 340px;
+  grid-template-rows: 44px 1fr 28px;
+  grid-template-areas:
+    "titlebar titlebar titlebar"
+    "sidebar  main     notifs"
+    "statusbar statusbar statusbar";
+  height: 100vh;
+}
+
+/* ---------- 4. TITLEBAR ---------- */
+.titlebar {
+  grid-area: titlebar;
+  background: #040609;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 var(--sp-4); gap: var(--sp-3);
+}
+.titlebar .traffic { display: flex; gap: 6px; }
+.titlebar .traffic .d { width: 12px; height: 12px; border-radius: 50%; background: var(--border-strong); }
+.titlebar h1 { font-size: var(--fs-md); font-weight: 500; color: var(--text-muted); }
+.titlebar .meta { margin-left: auto; display: flex; gap: var(--sp-4); align-items: center; font-size: var(--fs-xs); color: var(--text-muted); }
+.titlebar .live { display: flex; align-items: center; gap: 6px; color: var(--green); }
+.titlebar .live::before { content: ""; width: 8px; height: 8px; background: var(--green); border-radius: 50%; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+.titlebar .cmd-hint { padding: 3px 8px; background: var(--bg-panel); border-radius: var(--r-sm); border: 1px solid var(--border); }
+
+/* ---------- 5. SIDEBAR ---------- */
+.sidebar { grid-area: sidebar; background: var(--bg-panel); border-right: 1px solid var(--border); overflow-y: auto; padding: var(--sp-3) var(--sp-2); }
+.sb-h { font-size: var(--fs-xs); color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; padding: var(--sp-3) var(--sp-3) var(--sp-2); font-weight: 600; }
+.agent {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-3); border-radius: var(--r-md); cursor: pointer;
+  transition: background 0.12s; margin-bottom: 2px;
+}
+.agent:hover { background: var(--bg-hover); }
+.agent.active { background: var(--accent-soft); }
+.agent.active::before { content: ""; position: absolute; left: 0; width: 3px; height: 24px; background: var(--accent); border-radius: 0 2px 2px 0; margin-left: -8px; }
+.agent-status { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.agent-status.ok { background: var(--green); box-shadow: 0 0 8px rgba(34,197,94,0.5); }
+.agent-status.warn { background: var(--orange); }
+.agent-status.err { background: var(--red); animation: flash 1s infinite; }
+.agent-status.idle { background: var(--text-dim); }
+@keyframes flash { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.agent-body { flex: 1; min-width: 0; }
+.agent-name { font-size: var(--fs-md); font-weight: 500; }
+.agent-meta { font-size: var(--fs-xs); color: var(--text-muted); margin-top: 1px; }
+.agent-count { font-size: var(--fs-xs); background: var(--bg-surface); padding: 2px 8px; border-radius: 10px; color: var(--text-muted); }
+
+/* ---------- 6. MAIN ---------- */
+.main { grid-area: main; overflow-y: auto; padding: var(--sp-5); }
+.breadcrumb { font-size: var(--fs-sm); color: var(--text-muted); margin-bottom: var(--sp-2); }
+.breadcrumb .sep { margin: 0 6px; color: var(--text-dim); }
+.main-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: var(--sp-5); gap: var(--sp-4); }
+.main-head h2 { font-size: var(--fs-xxl); font-weight: 600; }
+.main-head h2 .badge-rol { display: inline-block; font-size: var(--fs-sm); font-weight: normal; color: var(--text-muted); background: var(--bg-panel); padding: 3px 10px; border-radius: 10px; margin-left: var(--sp-3); vertical-align: middle; }
+.main-head .sub { color: var(--text-muted); font-size: var(--fs-sm); margin-top: var(--sp-1); }
+.main-head .actions { display: flex; gap: var(--sp-2); }
+.main-head button.btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: var(--r-sm); font-size: var(--fs-sm); background: var(--bg-panel); }
+.main-head button.btn:hover { background: var(--bg-hover); }
+.main-head button.btn.primary { background: var(--accent); border-color: var(--accent); color: white; }
+
+/* Progress box */
+.progress-box { background: var(--bg-panel); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--sp-4) var(--sp-5); margin-bottom: var(--sp-4); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.stat .num { font-size: var(--fs-xxl); font-weight: 700; line-height: 1; }
+.stat .num.pend { color: var(--accent); }
+.stat .num.curr { color: var(--orange); }
+.stat .num.done { color: var(--green); }
+.stat .lbl { font-size: var(--fs-xs); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: var(--sp-1); }
+.bar-container { display: flex; gap: 2px; height: 8px; border-radius: 4px; overflow: hidden; }
+.bar-seg { height: 100%; }
+.bar-seg.done { background: var(--green); }
+.bar-seg.curr { background: var(--orange); }
+.bar-seg.pend { background: var(--accent); opacity: 0.4; }
+
+/* Filter bar */
+.filter-bar { display: flex; gap: var(--sp-2); margin-bottom: var(--sp-3); align-items: center; }
+.search { flex: 1; position: relative; }
+.search input { width: 100%; padding-left: 32px; }
+.search::before { content: "🔍"; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: var(--fs-sm); opacity: 0.6; }
+.chips { display: flex; gap: 6px; }
+.chip { padding: 5px 10px; border-radius: 14px; font-size: var(--fs-xs); background: var(--bg-panel); border: 1px solid var(--border); cursor: pointer; }
+.chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+/* Task list */
+.task {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--bg-panel); border-left: 3px solid var(--border);
+  border-radius: 0 var(--r-md) var(--r-md) 0;
+  padding: var(--sp-3) var(--sp-4); margin-bottom: 6px;
+  cursor: pointer; transition: background 0.12s;
+}
+.task:hover { background: var(--bg-hover); }
+.task.pend { border-left-color: var(--accent); }
+.task.curr { border-left-color: var(--orange); }
+.task.done { border-left-color: var(--green); opacity: 0.75; }
+.task.blocked { border-left-color: var(--red); }
+.task .tname { font-size: var(--fs-md); }
+.task .tmeta { font-size: var(--fs-xs); color: var(--text-muted); }
+.task .right { display: flex; gap: var(--sp-3); align-items: center; font-size: var(--fs-xs); color: var(--text-muted); }
+
+/* Section */
+.section { margin-top: var(--sp-5); }
+.section h3 { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: var(--sp-3); display: flex; gap: var(--sp-2); align-items: center; }
+.section h3 .count { background: var(--bg-surface); padding: 2px 8px; border-radius: 10px; font-size: var(--fs-xs); color: var(--text-muted); font-weight: normal; letter-spacing: normal; text-transform: none; }
+
+/* Empty state */
+.empty { text-align: center; color: var(--text-dim); padding: var(--sp-5); font-size: var(--fs-sm); }
+.empty::before { content: "∅"; display: block; font-size: 2rem; margin-bottom: var(--sp-2); opacity: 0.5; }
+
+/* ---------- 7. PANEL NOTIFICACIONES ---------- */
+.notifs { grid-area: notifs; background: var(--bg-panel); border-left: 1px solid var(--border); padding: var(--sp-4); overflow-y: auto; }
+.notifs-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-3); }
+.notifs-head h3 { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+.notifs-head .dot-count { background: var(--red); color: white; border-radius: 10px; padding: 2px 8px; font-size: var(--fs-xs); font-weight: 600; }
+.notifs-head button.clear { font-size: var(--fs-xs); color: var(--text-muted); }
+.notif { background: var(--bg-surface); border-left: 3px solid var(--border); border-radius: 0 var(--r-md) var(--r-md) 0; padding: var(--sp-3); margin-bottom: var(--sp-2); }
+.notif.err { border-left-color: var(--red); }
+.notif.warn { border-left-color: var(--orange); }
+.notif.info { border-left-color: var(--accent); }
+.notif.success { border-left-color: var(--green); }
+.notif .nt { font-size: var(--fs-sm); font-weight: 500; margin-bottom: 3px; display: flex; justify-content: space-between; }
+.notif .nt .time { font-size: var(--fs-xs); color: var(--text-dim); font-weight: normal; }
+.notif .nd { font-size: var(--fs-xs); color: var(--text-muted); line-height: 1.4; }
+.notif .btns { margin-top: var(--sp-2); display: flex; gap: 6px; }
+.notif .btns button { font-size: var(--fs-xs); padding: 3px 8px; border: 1px solid var(--border); border-radius: var(--r-sm); background: transparent; }
+.notif .btns button:hover { background: var(--bg-hover); }
+
+/* Master progress block */
+.master-block { margin-top: var(--sp-5); padding: var(--sp-3); background: var(--bg-surface); border-radius: var(--r-md); border: 1px solid var(--border); }
+.master-block h4 { font-size: var(--fs-sm); margin-bottom: var(--sp-2); display: flex; justify-content: space-between; }
+.master-block .phase { font-size: var(--fs-xs); color: var(--text-muted); margin-top: var(--sp-1); }
+
+/* ---------- 8. STATUSBAR ---------- */
+.statusbar {
+  grid-area: statusbar; background: #040609; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--sp-4); font-size: var(--fs-xs); color: var(--text-muted);
+}
+.statusbar .left { display: flex; gap: var(--sp-4); align-items: center; }
+.statusbar .sync { color: var(--green); display: flex; align-items: center; gap: 4px; }
+.statusbar .sync::before { content: "●"; }
+.statusbar .offline { color: var(--red); display: none; }
+.statusbar .right { display: flex; gap: var(--sp-4); }
+.statusbar .right button { font-size: var(--fs-xs); color: var(--text-muted); }
+.statusbar .right button:hover { color: var(--text); }
+
+/* ---------- 9. TOAST (ephemeral) ---------- */
+.toast-container { position: fixed; bottom: 48px; right: 20px; display: flex; flex-direction: column; gap: 8px; z-index: 100; }
+.toast { background: var(--bg-surface); border-left: 3px solid var(--accent); padding: var(--sp-3) var(--sp-4); border-radius: var(--r-md); box-shadow: var(--shadow); min-width: 260px; font-size: var(--fs-sm); animation: slideIn 0.25s; }
+.toast.success { border-left-color: var(--green); }
+.toast.err { border-left-color: var(--red); }
+@keyframes slideIn { from { transform: translateX(20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* ---------- 10. CMD PALETTE (overlay) ---------- */
+.cmd-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); z-index: 50; align-items: flex-start; justify-content: center; padding-top: 120px; }
+.cmd-overlay.open { display: flex; }
+.cmd-box { width: 520px; background: var(--bg-panel); border: 1px solid var(--border-strong); border-radius: var(--r-lg); box-shadow: var(--shadow); overflow: hidden; }
+.cmd-box input { width: 100%; padding: var(--sp-4); font-size: var(--fs-lg); background: transparent; border: none; border-bottom: 1px solid var(--border); border-radius: 0; }
+.cmd-item { padding: 10px var(--sp-4); display: flex; justify-content: space-between; cursor: pointer; }
+.cmd-item:hover { background: var(--bg-hover); }
+.cmd-item .shortcut { color: var(--text-dim); font-size: var(--fs-xs); }
+
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- =========================================================
+       TITLEBAR
+       ========================================================= -->
+  <header class="titlebar">
+    <div class="traffic"><span class="d"></span><span class="d"></span><span class="d"></span></div>
+    <h1>Panel Agentes · panel-agentes</h1>
+    <div class="meta">
+      <button class="cmd-hint">⌘ + K</button>
+      <span class="live">En vivo · sync 10s</span>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SIDEBAR · lista de agentes
+       ========================================================= -->
+  <aside class="sidebar">
+    <div class="sb-h">Agentes en loop</div>
+
+    <div class="agent">
+      <span class="agent-status ok"></span>
+      <div class="agent-body"><div class="agent-name">Orchestrator</div><div class="agent-meta">local · hace 8s</div></div>
+      <span class="agent-count">4</span>
+    </div>
+
+    <div class="agent">
+      <span class="agent-status warn"></span>
+      <div class="agent-body"><div class="agent-name">Skills-Curator</div><div class="agent-meta">VPS-1 · hace 1 min</div></div>
+      <span class="agent-count">76</span>
+    </div>
+
+    <div class="agent active" style="position: relative;">
+      <span class="agent-status ok"></span>
+      <div class="agent-body"><div class="agent-name">Builder</div><div class="agent-meta">VPS-2 · hace 6s</div></div>
+      <span class="agent-count">1</span>
+    </div>
+
+    <div class="agent">
+      <span class="agent-status ok"></span>
+      <div class="agent-body"><div class="agent-name">Auditor + Ops</div><div class="agent-meta">VPS-3 · hace 22s</div></div>
+      <span class="agent-count">92</span>
+    </div>
+
+    <div class="sb-h">On-demand</div>
+
+    <div class="agent">
+      <span class="agent-status idle"></span>
+      <div class="agent-body"><div class="agent-name">Architect</div><div class="agent-meta">sesión tuya</div></div>
+      <span class="agent-count">0</span>
+    </div>
+
+    <div class="agent">
+      <span class="agent-status idle"></span>
+      <div class="agent-body"><div class="agent-name">Scout</div><div class="agent-meta">sesión tuya</div></div>
+      <span class="agent-count">0</span>
+    </div>
+
+    <div class="sb-h">Modo master</div>
+    <div class="master-block">
+      <h4>panel-agentes <span style="color:var(--accent);">● activo</span></h4>
+      <div class="phase">Fase A aprobada · Fase B en ejecución</div>
+      <div class="bar-container" style="margin-top:8px;">
+        <div class="bar-seg done" style="width:78%;"></div>
+        <div class="bar-seg curr" style="width:4%;"></div>
+        <div class="bar-seg pend" style="width:18%;"></div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================
+       MAIN · vista detalle del agente seleccionado (Builder)
+       ========================================================= -->
+  <main class="main">
+    <div class="breadcrumb">Agentes <span class="sep">›</span> Builder</div>
+
+    <div class="main-head">
+      <div>
+        <h2>Builder <span class="badge-rol">VPS-2</span></h2>
+        <div class="sub">Codea pasos con spec completa · 101 tareas asignadas históricas · última señal hace 6 s</div>
+      </div>
+      <div class="actions">
+        <button class="btn">⎘ Exportar</button>
+        <button class="btn primary">↻ Refrescar</button>
+      </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-box">
+      <div class="stats">
+        <div class="stat"><div class="num pend">1</div><div class="lbl">Pendientes</div></div>
+        <div class="stat"><div class="num curr">0</div><div class="lbl">En curso</div></div>
+        <div class="stat"><div class="num done">100</div><div class="lbl">Completadas</div></div>
+        <div class="stat"><div class="num">99%</div><div class="lbl">Progreso</div></div>
+      </div>
+      <div class="bar-container">
+        <div class="bar-seg done" style="width:99%;"></div>
+        <div class="bar-seg pend" style="width:1%;"></div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-bar">
+      <div class="search"><input placeholder="Buscar tareas..." /></div>
+      <div class="chips">
+        <button class="chip active">Todas</button>
+        <button class="chip">Pendientes</button>
+        <button class="chip">En curso</button>
+        <button class="chip">Completadas</button>
+        <button class="chip">Errores</button>
+      </div>
+    </div>
+
+    <!-- Pending -->
+    <div class="section">
+      <h3>Pendientes <span class="count">1</span></h3>
+      <div class="task blocked">
+        <div>
+          <div class="tname">builder-002 · implementar-panel-agentes</div>
+          <div class="tmeta">🔒 lista para tomar · Fase B · alta prioridad</div>
+        </div>
+        <div class="right"><span>depende 0/0</span><span>⏱ recién desbloqueada</span></div>
+      </div>
+    </div>
+
+    <!-- Current -->
+    <div class="section">
+      <h3>En curso <span class="count">0</span></h3>
+      <div class="empty">Sin tareas activas</div>
+    </div>
+
+    <!-- Done -->
+    <div class="section">
+      <h3>Últimas completadas <span class="count">100</span></h3>
+      <div class="task done"><div><div class="tname">builder-107 · estudiar-plan-completo</div><div class="tmeta">✓ hace 12 min</div></div><div class="right"><span>15 commits</span></div></div>
+      <div class="task done"><div><div class="tname">builder-99 · hook-use-online-status</div><div class="tmeta">✓ hace 28 min</div></div><div class="right"><span>3 commits</span></div></div>
+      <div class="task done"><div><div class="tname">builder-79 · tag-release-v010</div><div class="tmeta">✓ hace 45 min</div></div><div class="right"><span>3 commits</span></div></div>
+      <div class="task done"><div><div class="tname">builder-29 · error-boundary-component</div><div class="tmeta">✓ hace 1 h</div></div><div class="right"><span>3 commits</span></div></div>
+      <div style="text-align:center; color:var(--text-dim); font-size: var(--fs-xs); padding: var(--sp-3);">... 96 más · ver todas ›</div>
+    </div>
+  </main>
+
+  <!-- =========================================================
+       NOTIFICACIONES
+       ========================================================= -->
+  <aside class="notifs">
+    <div class="notifs-head">
+      <h3>Notificaciones <span class="dot-count">3</span></h3>
+      <button class="clear">marcar todas</button>
+    </div>
+
+    <div class="notif err">
+      <div class="nt">🔴 Skills-Curator lento <span class="time">hace 3 min</span></div>
+      <div class="nd">76 pendientes, ritmo ~1 tarea/ciclo. ETA 1h 16min a cola vacía.</div>
+      <div class="btns"><button>Ver cola</button><button>Ignorar</button></div>
+    </div>
+
+    <div class="notif warn">
+      <div class="nt">🟠 Commits gigantes skills-curator <span class="time">hace 2 min</span></div>
+      <div class="nd">Viola regla anti-choques. Regla reforzada en ciclo.</div>
+    </div>
+
+    <div class="notif success">
+      <div class="nt">✅ Fase A aprobada <span class="time">hace 1 min</span></div>
+      <div class="nd">Builder-002 desbloqueado. Listo para ejecución v0.1.</div>
+    </div>
+
+    <div class="notif info">
+      <div class="nt">🔵 Modo master 82% <span class="time">hace 40s</span></div>
+      <div class="nd">272 / 330 tareas completadas globales. Falta skills-curator + auditor-ops.</div>
+    </div>
+  </aside>
+
+  <!-- =========================================================
+       STATUSBAR
+       ========================================================= -->
+  <footer class="statusbar">
+    <div class="left">
+      <span class="sync">Sincronizado</span>
+      <span>Última sync: hace 6 s</span>
+      <span>master @ ed45cf2</span>
+      <span>330 tareas · 272 completadas</span>
+    </div>
+    <div class="right">
+      <button>⚙ Ajustes</button>
+      <button>? Atajos</button>
+      <button>🌙 Tema</button>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       TOAST (ejemplo)
+       ========================================================= -->
+  <div class="toast-container">
+    <div class="toast success">
+      <strong>Builder-107 completada</strong><br>
+      <span style="color:var(--text-muted); font-size:var(--fs-xs);">hace 12 min · 15 commits</span>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       CMD PALETTE (oculto, demo)
+       ========================================================= -->
+  <div class="cmd-overlay">
+    <div class="cmd-box">
+      <input placeholder="Buscar comando o tarea...">
+      <div class="cmd-item">↻ Refrescar repo<span class="shortcut">Ctrl+R</span></div>
+      <div class="cmd-item">📂 Ver agente builder<span class="shortcut">G B</span></div>
+      <div class="cmd-item">⚙ Abrir ajustes<span class="shortcut">Ctrl+,</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Comentarios del orchestrator (agregados fuera del plan):
+     - Cmd palette (⌘K) — mejora UX y cumple architect-068.
+     - Filter chips + search bar — cumple architect-048/049.
+     - Toast ephemeral — cumple builder-036.
+     - Dual-theme button en statusbar — cumple builder-96.
+     - Atajos de teclado visibles en statusbar — UX accesibilidad.
+     Todo coherente con planificación aprobada.
+-->
+
+</body>
+</html>
