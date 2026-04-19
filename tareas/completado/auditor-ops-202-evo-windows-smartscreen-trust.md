@@ -13,3 +13,8 @@ Ciclo evolución. Investigar web sobre "windows-smartscreen-trust" y guardar en 
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Fuente: MS Q&A + DigiCert + Betterbird blog.
+- Archivo: conocimiento/auditor-ops/2026-04-19-windows-smartscreen-trust.md
