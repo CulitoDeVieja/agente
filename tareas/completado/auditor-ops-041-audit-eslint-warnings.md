@@ -13,3 +13,11 @@ Documentar plan de "audit-eslint-warnings" en `planificacion/panel-agentes/detal
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-eslint-warnings.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
