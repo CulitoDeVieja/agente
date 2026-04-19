@@ -13,3 +13,11 @@ Documentar plan de "audit-plan-architect-cubre-features" en `planificacion/panel
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-plan-architect-cubre-features.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
