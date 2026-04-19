@@ -69,9 +69,11 @@ set -e
 cd /opt/agente/agente
 git pull --rebase
 
-# Arranca sesión de Claude Code con contexto del rol
-claude --prompt "Sos el agente $AGENT_ROLE. Lee /opt/agente/agente/agentes/$AGENT_ROLE.md y seguí sus instrucciones. Tus skills base están en /opt/agente/agente/agentes/skills/. Tu cola: ls /opt/agente/agente/tareas/pendiente/ | grep ^$AGENT_ROLE-. Si hay tarea: git mv a tareas/en-curso, ejecutá, git mv a tareas/completado con log. Si cola vacía → 'sin novedades' y salí."
+# Arranca sesión con permisos pre-aprobados (skip-permissions solo en VPS aislado)
+claude --dangerously-skip-permissions --prompt "Sos el agente $AGENT_ROLE. Lee /opt/agente/agente/agentes/$AGENT_ROLE.md y seguí sus instrucciones. Tus skills base están en /opt/agente/agente/agentes/skills/. Tu cola: ls /opt/agente/agente/tareas/pendiente/ | grep ^$AGENT_ROLE-. Si hay tarea: git mv a tareas/en-curso, ejecutá, git mv a tareas/completado con log. Si cola vacía → 'sin novedades' y salí."
 ```
+
+**Importante:** `--dangerously-skip-permissions` solo se usa porque los VPS están aislados del owner y todo queda trazado en commits. Ver skill `agentes/skills/permisos-preaprobados.md` para opción alternativa con whitelist.
 
 ```bash
 chmod +x /opt/agente/ciclo.sh
