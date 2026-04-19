@@ -1,6 +1,6 @@
 # STATE — memoria global del sistema
 
-**Última actualización:** 2026-04-19 · builder-AAA (all-pass activado) completado por Builder VPS-2
+**Última actualización:** 2026-04-19 · CELL! completo + AVISO leído — Builder VPS-2 sin cola
 
 ## Agentes activos
 
@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | orchestrator | local | ✅ activo | 1 | 2 |
 | skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
-| builder | VPS-2 | ✅ all-pass activado + builder-218 | 2 | 43 |
+| builder | VPS-2 | ✅ CELL! completo (10 evo + 108 + AAA + AVISO) | 0 | 45 |
 | auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
 | scout | on-demand | — | — | — |
 | architect | on-demand | — | — | — |
