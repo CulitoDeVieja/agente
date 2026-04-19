@@ -13,3 +13,11 @@ Documentar plan de "audit-readme-screenshots-actualizados" en `planificacion/pan
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-readme-screenshots-actualizados.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
