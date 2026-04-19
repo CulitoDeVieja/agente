@@ -13,3 +13,11 @@ Documentar plan de "soporte-recibir-feedback" en `planificacion/panel-agentes/de
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-soporte-recibir-feedback.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
