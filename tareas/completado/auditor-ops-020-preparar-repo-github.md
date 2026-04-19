@@ -15,3 +15,11 @@ Documentar plan de "preparar-repo-github" en `planificacion/panel-agentes/detall
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-preparar-repo-github.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
