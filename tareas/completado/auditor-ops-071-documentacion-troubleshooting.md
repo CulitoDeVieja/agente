@@ -13,3 +13,11 @@ Documentar plan de "documentacion-troubleshooting" en `planificacion/panel-agent
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-documentacion-troubleshooting.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
