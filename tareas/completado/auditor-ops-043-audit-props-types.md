@@ -13,3 +13,11 @@ Documentar plan de "audit-props-types" en `planificacion/panel-agentes/detalle/a
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-props-types.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
