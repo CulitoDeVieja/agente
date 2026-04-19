@@ -13,3 +13,7 @@ Ciclo evolución. Investigar web sobre "renovate-vs-dependabot" y guardar en `co
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-renovate-vs-dependabot.md
