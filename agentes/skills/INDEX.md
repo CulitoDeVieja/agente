@@ -75,4 +75,4 @@ Se cargan **lazy**: el agente lee solo las que necesita para la tarea actual, pa
 - Sin espacios, sin mayúsculas.
 
 ## Cómo un agente pide una skill nueva
-Abre issue en `repo/orchestrator` con etiqueta `skill-request`. El Skills-Curator la toma en su próximo ciclo.
+Crea archivo `tareas/pendiente/skills-curator-XXX-nueva-skill-<nombre>.md` describiendo el gap. El Skills-Curator la toma en su próximo ciclo.
