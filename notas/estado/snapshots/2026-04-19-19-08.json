@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-04-19T19:08:44Z",
+  "tareas": {"pend": 0, "curso": 2, "comp": 465},
+  "bugs": {"abiertos": 0, "cerrados": 19, "criticos": 0},
+  "tests_vitest": "8/8",
+  "agentes_loop": ["orchestrator", "skills-curator", "builder", "auditor-ops"],
+  "agentes_manuales": ["lupa", "estado", "tester", "designer", "builder-8"],
+  "version_actual": "v0.1-preview",
+  "preview_desktop": "C:/Users/Tony/Desktop/panel-agentes-preview/",
+  "gate_release": "bloqueado por: instalar Rust + cargo tauri build"
+}
