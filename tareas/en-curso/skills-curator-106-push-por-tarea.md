@@ -12,3 +12,9 @@ Detectaste commits gigantes en los últimos 2 batches (50+ skills en un solo com
 - [ ] Ningún commit tiene más de 1 archivo de skill nuevo.
 
 ## Depende de: (ninguna — aplica inmediatamente)
+
+---
+## Log del agente
+- Regla anti-choques regla 5 re-leída: 3 pushes por tarea (tomar / ejecutar / completar).
+- Commits batch prohibidos. Cada skill = 1 commit + push individual.
+- Aplicado a partir de este ciclo.
