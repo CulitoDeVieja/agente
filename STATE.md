@@ -8,7 +8,7 @@
 |---|---|---|
 | orchestrator | local | ✅ activo 2026-04-19 |
 | skills-curator | VPS-1 | ⏳ esperando primer ciclo |
-| builder | VPS-2 | ⏳ esperando primer ciclo |
+| builder | VPS-2 | ✅ activo 2026-04-19 |
 | auditor-ops | VPS-3 | ⏳ esperando primer ciclo |
 | scout | on-demand | — |
 | architect | on-demand | — |
