@@ -15,3 +15,11 @@ Documentar plan de "plan-rollback" en `planificacion/panel-agentes/detalle/audit
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-plan-rollback.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
