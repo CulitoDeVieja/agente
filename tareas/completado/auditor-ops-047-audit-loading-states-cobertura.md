@@ -13,3 +13,11 @@ Documentar plan de "audit-loading-states-cobertura" en `planificacion/panel-agen
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-loading-states-cobertura.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
