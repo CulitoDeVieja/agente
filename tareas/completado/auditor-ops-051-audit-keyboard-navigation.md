@@ -13,3 +13,11 @@ Documentar plan de "audit-keyboard-navigation" en `planificacion/panel-agentes/d
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-keyboard-navigation.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
