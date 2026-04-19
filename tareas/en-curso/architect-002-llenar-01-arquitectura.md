@@ -9,13 +9,13 @@
 Completar la sección de arquitectura del panel-agentes. Base: `/PLAN-MASTER-panel-agentes.md`.
 
 ## Acceptance criteria
-- [ ] Validar stack (Tauri 2 + React + TS + Tailwind) o proponer cambio con justificación.
-- [ ] Árbol de componentes React definido.
-- [ ] Signatures Rust + tipos TS en detalle.
-- [ ] Config (ruta repo, timeout refresh, etc).
-- [ ] Librerías externas mínimas listadas.
-- [ ] 1 ADR en `notas/architect/adr-001-*.md` si hay decisión con blast radius alto.
-- [ ] Marcar `## Estado: aprobado` al final del archivo.
+- [x] Validar stack (Tauri 2 + React + TS + Tailwind) o proponer cambio con justificación.
+- [x] Árbol de componentes React definido.
+- [x] Signatures Rust + tipos TS en detalle.
+- [x] Config (ruta repo, timeout refresh, etc).
+- [x] Librerías externas mínimas listadas.
+- [x] 1 ADR en `notas/architect/adr-001-*.md` si hay decisión con blast radius alto.
+- [x] Marcar `## Estado: aprobado` al final del archivo.
 
 ## Depende de:
 (ninguna)
@@ -27,4 +27,9 @@ Completar la sección de arquitectura del panel-agentes. Base: `/PLAN-MASTER-pan
 ---
 
 ## Log del agente
-(vacío hasta completar)
+- Archivo completado: `planificacion/panel-agentes/01-arquitectura.md` (estado: aprobado)
+- ADR creado: `notas/architect/adr-001-sin-state-manager.md` (React Context, sin Redux/Zustand)
+- Stack ratificado (Tauri 2 + React 18 + TS + Tailwind v4)
+- Alternativas descartadas justificadas: Electron (size), Wails (signing), Solid (tracción)
+- Decisiones clave: routing con `location.hash`, filesystem via `git2` (no shell), context path en `%APPDATA%/panel-agentes/`
+- Habilita: builder-003 y skills-curator-003
