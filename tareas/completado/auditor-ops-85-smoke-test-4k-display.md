@@ -13,3 +13,11 @@ Documentar plan de "smoke-test-4k-display" en `planificacion/panel-agentes/detal
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-smoke-test-4k-display.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
