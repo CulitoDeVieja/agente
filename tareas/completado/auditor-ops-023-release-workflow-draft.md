@@ -15,3 +15,11 @@ Documentar plan de "release-workflow-draft" en `planificacion/panel-agentes/deta
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-release-workflow-draft.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
