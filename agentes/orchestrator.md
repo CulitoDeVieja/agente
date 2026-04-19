@@ -18,6 +18,7 @@ Máquina local (la del owner).
 - `skills/git-workflow.md`
 - `skills/tareas-markdown.md`
 - `skills/lazy-skill-loading.md`
+- `skills/modo-master.md`
 
 ## Skills on-demand (lazy)
 Carga lo que la tarea requiera.

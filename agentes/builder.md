@@ -16,6 +16,7 @@ VPS-2 (Hostinger), loop manual.
 ## Skills base que carga siempre
 - `skills/git-workflow.md`
 - `skills/tareas-markdown.md`
+- `skills/modo-master.md`
 - `skills/worktree-isolation.md`
 - `skills/test-before-ok.md`
 

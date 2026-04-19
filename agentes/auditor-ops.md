@@ -21,6 +21,7 @@ VPS-3 (Hostinger), loop manual.
 ## Skills base que carga siempre
 - `skills/git-workflow.md`
 - `skills/tareas-markdown.md`
+- `skills/modo-master.md`
 - `skills/test-running.md`
 
 ## Skills on-demand
