@@ -4,8 +4,8 @@
   "curator": "lupa",
   "resumen": {
     "total": 19,
-    "cerrados": 18,
-    "abiertos": 1,
+    "cerrados": 19,
+    "abiertos": 0,
     "criticos_abiertos": 0,
     "altos_abiertos": 0
   },
@@ -28,6 +28,6 @@
     { "id": "LUPA-016", "titulo": "CI rust-check job falla: cargo fmt --check (commands.rs sin formatear)", "severidad": "media", "estado": "cerrado", "detectado_por": "auditor-ops", "fuente": "CI run 24635187055 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-011-rustfmt-commands-rs", "resuelto_en": "panel-agentes commit 280e5e8 (cargo fmt aplicado)", "fecha_cierre": "2026-04-19" },
     { "id": "LUPA-017", "titulo": "tauri::generate_context! panicked — icon.png no es RGBA", "severidad": "alta", "estado": "cerrado", "detectado_por": "auditor-ops", "fuente": "CI run 24635314737 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-012-icon-not-rgba", "resuelto_en": "panel-agentes commit 06a7d8c (icon.png 1024x1024 RGBA)", "fecha_cierre": "2026-04-19" },
     { "id": "LUPA-018", "titulo": "Clippy error: unused import std::path::Path", "severidad": "baja", "estado": "cerrado", "detectado_por": "auditor-ops", "fuente": "CI run 24635314737 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-013-clippy-unused-import", "resuelto_en": "panel-agentes commit 06a7d8c", "fecha_cierre": "2026-04-19" },
-    { "id": "LUPA-019", "titulo": "Clippy error: manual_split_once en parser.rs:77 (usar split_once)", "severidad": "baja", "estado": "abierto", "detectado_por": "auditor-ops", "fuente": "CI run 24635445084 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-014-clippy-manual-split-once", "ubicacion": "src-tauri/src/parser.rs:77" }
+    { "id": "LUPA-019", "titulo": "Clippy error: manual_split_once en parser.rs:77 (usar split_once)", "severidad": "baja", "estado": "cerrado", "detectado_por": "auditor-ops", "fuente": "CI run 24635445084 panel-agentes 2026-04-19", "tarea_fix": "builder-fix-014-clippy-manual-split-once", "resuelto_en": "panel-agentes commit b1a7986 (CI run 24635628736 success)", "fecha_cierre": "2026-04-19" }
   ]
 }
