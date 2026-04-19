@@ -10,3 +10,7 @@ Investigar "squirrel-windows-updater", guardar en `conocimiento/auditor-ops/2026
 - [ ] Archivo + fuente real + aplicabilidad.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-squirrel-windows-updater.md
