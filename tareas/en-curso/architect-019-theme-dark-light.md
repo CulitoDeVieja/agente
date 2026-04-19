@@ -16,3 +16,11 @@ Documentar decisión sobre "theme-dark-light" en `planificacion/panel-agentes/de
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-theme-dark-light.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

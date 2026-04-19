@@ -16,3 +16,11 @@ Documentar decisión sobre "animations-transitions" en `planificacion/panel-agen
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-animations-transitions.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

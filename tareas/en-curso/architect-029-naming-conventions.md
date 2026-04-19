@@ -16,3 +16,11 @@ Documentar decisión sobre "naming-conventions" en `planificacion/panel-agentes/
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-naming-conventions.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

@@ -16,3 +16,11 @@ Documentar decisión sobre "empty-states" en `planificacion/panel-agentes/detall
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-empty-states.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

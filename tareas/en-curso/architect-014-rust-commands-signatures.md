@@ -16,3 +16,11 @@ Documentar decisión sobre "rust-commands-signatures" en `planificacion/panel-ag
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-rust-commands-signatures.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

@@ -16,3 +16,11 @@ Documentar decisión sobre "arbol-componentes-react" en `planificacion/panel-age
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-arbol-componentes-react.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

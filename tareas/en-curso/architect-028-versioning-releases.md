@@ -16,3 +16,11 @@ Documentar decisión sobre "versioning-releases" en `planificacion/panel-agentes
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-versioning-releases.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

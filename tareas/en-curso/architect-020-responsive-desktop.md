@@ -16,3 +16,11 @@ Documentar decisión sobre "responsive-desktop" en `planificacion/panel-agentes/
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-responsive-desktop.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

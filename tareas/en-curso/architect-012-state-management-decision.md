@@ -16,3 +16,11 @@ Documentar decisión sobre "state-management-decision" en `planificacion/panel-a
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-state-management-decision.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

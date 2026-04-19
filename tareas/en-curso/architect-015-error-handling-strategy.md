@@ -16,3 +16,11 @@ Documentar decisión sobre "error-handling-strategy" en `planificacion/panel-age
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-error-handling-strategy.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

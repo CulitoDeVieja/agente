@@ -16,3 +16,11 @@ Documentar decisión sobre "loading-states" en `planificacion/panel-agentes/deta
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-loading-states.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

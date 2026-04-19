@@ -16,3 +16,11 @@ Documentar decisión sobre "keyboard-shortcuts" en `planificacion/panel-agentes/
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-keyboard-shortcuts.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

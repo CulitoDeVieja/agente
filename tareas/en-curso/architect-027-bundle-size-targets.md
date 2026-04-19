@@ -16,3 +16,11 @@ Documentar decisión sobre "bundle-size-targets" en `planificacion/panel-agentes
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-bundle-size-targets.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

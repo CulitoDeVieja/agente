@@ -16,3 +16,11 @@ Documentar decisión sobre "rutas-app" en `planificacion/panel-agentes/detalle/a
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-rutas-app.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

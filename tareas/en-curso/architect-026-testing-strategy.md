@@ -16,3 +16,11 @@ Documentar decisión sobre "testing-strategy" en `planificacion/panel-agentes/de
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-testing-strategy.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

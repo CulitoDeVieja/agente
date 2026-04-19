@@ -16,3 +16,11 @@ Documentar decisión sobre "tipos-ts-completos" en `planificacion/panel-agentes/
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-tipos-ts-completos.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

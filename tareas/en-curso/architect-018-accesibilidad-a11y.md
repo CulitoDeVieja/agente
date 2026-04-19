@@ -16,3 +16,11 @@ Documentar decisión sobre "accesibilidad-a11y" en `planificacion/panel-agentes/
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-accesibilidad-a11y.md`
+- Alternativas y justificación incluidas
+- AC cumplidos

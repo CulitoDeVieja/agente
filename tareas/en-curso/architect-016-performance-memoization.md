@@ -16,3 +16,11 @@ Documentar decisión sobre "performance-memoization" en `planificacion/panel-age
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión documentada en `planificacion/panel-agentes/detalle/architect-performance-memoization.md`
+- Alternativas y justificación incluidas
+- AC cumplidos
