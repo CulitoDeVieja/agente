@@ -13,3 +13,11 @@ Documentar plan de "audit-secrets-scan" en `planificacion/panel-agentes/detalle/
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-audit-secrets-scan.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
