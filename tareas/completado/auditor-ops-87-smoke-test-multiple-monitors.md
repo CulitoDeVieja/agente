@@ -13,3 +13,11 @@ Documentar plan de "smoke-test-multiple-monitors" en `planificacion/panel-agente
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-smoke-test-multiple-monitors.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
