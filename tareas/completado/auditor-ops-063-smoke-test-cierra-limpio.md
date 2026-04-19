@@ -13,3 +13,11 @@ Documentar plan de "smoke-test-cierra-limpio" en `planificacion/panel-agentes/de
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-smoke-test-cierra-limpio.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
