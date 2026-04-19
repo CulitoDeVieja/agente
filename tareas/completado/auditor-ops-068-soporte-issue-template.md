@@ -13,3 +13,11 @@ Documentar plan de "soporte-issue-template" en `planificacion/panel-agentes/deta
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-soporte-issue-template.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
