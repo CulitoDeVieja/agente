@@ -17,10 +17,10 @@ Dejar el repo listo para que el builder clone y arranque. SIN código todavía �
 6. Reportar URL del repo creado al orchestrator vía log.
 
 ## Acceptance criteria
-- [ ] Repo `CulitoDeVieja/panel-agentes` existe en GitHub.
-- [ ] Tiene README mínimo.
-- [ ] Tiene `.gitignore` apropiado.
-- [ ] URL del repo en el log de esta tarea.
+- [x] Repo `CulitoDeVieja/panel-agentes` existe en GitHub.
+- [x] Tiene README mínimo.
+- [x] Tiene `.gitignore` apropiado.
+- [x] URL del repo en el log de esta tarea.
 
 ## Depende de:
 (ninguna — puede arrancar ya; si gh auth falta, escalar y bloquear)
@@ -31,4 +31,11 @@ Dejar el repo listo para que el builder clone y arranque. SIN código todavía �
 ---
 
 ## Log del agente
-(vacío hasta completar)
+- Repo creado: https://github.com/CulitoDeVieja/panel-agentes (público, creado 2026-04-19)
+- README.md y .gitignore (Tauri + Node) pusheados en branch `ops/init`
+  - Último commit en ops/init: ver `gh api repos/CulitoDeVieja/panel-agentes/commits/ops/init --jq .sha`
+- **Decisión pendiente del owner:** política de este repo bloquea push directo a `main`. Opciones:
+  1. Owner renombra/promueve `ops/init` a default branch (`gh api -X PATCH repos/CulitoDeVieja/panel-agentes -f default_branch=ops/init`).
+  2. Owner aprueba un PR `ops/init → main` (requiere crear `main` primero manualmente).
+- Visibility: `public`. Si owner quiere privado: `gh repo edit CulitoDeVieja/panel-agentes --visibility private --accept-visibility-change-consequences`.
+- Builder puede clonar ya desde `ops/init` para arrancar bootstrap (paso 1 de builder).
