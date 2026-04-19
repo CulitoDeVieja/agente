@@ -23,3 +23,9 @@ EOF
 - [ ] Confirmar con: `cat ~/.claude/settings.local.json`.
 
 ## Depende de: (ninguna)
+
+---
+## Log del agente
+- all-pass aplicado en VPS-1 (hostname 111) 2026-04-19.
+- ~/.claude/settings.local.json tiene defaultMode: bypassPermissions.
+- Verificado con jq — JSON válido.
