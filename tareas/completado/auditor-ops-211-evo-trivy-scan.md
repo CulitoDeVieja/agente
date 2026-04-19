@@ -10,3 +10,7 @@ Investigar "trivy-scan", guardar en `conocimiento/auditor-ops/2026-04-19-trivy-s
 - [ ] Archivo + fuente real + aplicabilidad.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-trivy-scan.md
