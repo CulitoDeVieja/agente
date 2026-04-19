@@ -11,6 +11,10 @@ Se cargan **lazy**: el agente lee solo las que necesita para la tarea actual, pa
 - `lazy-skill-loading.md` — cómo decidir qué skills cargar.
 - `modo-master.md` — respetar dependencias entre tareas encadenadas.
 - `anti-choques.md` — namespace por rol + retry con backoff.
+- `all-pass.md` — bypass de prompts de permiso en VPS aislados.
+- `evolucion.md` — investigar web y guardar conocimiento por rol.
+- `fase-b-ejecucion.md` — reglas de ejecución post-planificación.
+- `permisos-preaprobados.md` — allowlist de comandos seguros.
 
 ## Skills por rol
 
@@ -19,7 +23,8 @@ Se cargan **lazy**: el agente lee solo las que necesita para la tarea actual, pa
 - `test-before-ok.md` — obligatorio test antes de cerrar issue.
 
 ### Auditor + Ops
-- `test-running.md` — correr test suites.
+- `test-rust-cargo.md` — correr test suites Rust con cargo.
+- `react-testing-vitest.md` — correr tests JS/TS con Vitest.
 - `railway-deploy.md` — deployar servicios a Railway desde CLI.
 - `systemd-services.md` — gestionar servicios systemd en VPS.
 
