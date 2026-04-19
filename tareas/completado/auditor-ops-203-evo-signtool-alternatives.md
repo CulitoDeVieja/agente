@@ -13,3 +13,8 @@ Ciclo evolución. Investigar web sobre "signtool-alternatives" y guardar en `con
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Fuente: AzureSignTool repo + MS docs + west-wind blog.
+- Archivo: conocimiento/auditor-ops/2026-04-19-signtool-alternatives.md
