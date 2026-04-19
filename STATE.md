@@ -1,6 +1,6 @@
 # STATE — memoria global del sistema
 
-**Última actualización:** 2026-04-19 · builder-212 (evo react-compiler) completado por Builder VPS-2
+**Última actualización:** 2026-04-19 · builder-213 (evo motion one) completado por Builder VPS-2
 
 ## Agentes activos
 
@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | orchestrator | local | ✅ activo | 1 | 2 |
 | skills-curator | VPS-1 | ✅ señal inicial — sin progreso aún | 24 | 0 |
-| builder | VPS-2 | ✅ builder-212 (evo) completado 2026-04-19 | 8 | 36 |
+| builder | VPS-2 | ✅ builder-213 (evo) completado 2026-04-19 | 7 | 37 |
 | auditor-ops | VPS-3 | ✅ activo 2026-04-19 | 100 | 0 |
 | scout | on-demand | — | — | — |
 | architect | on-demand | — | — | — |
