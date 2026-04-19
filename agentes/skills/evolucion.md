@@ -3,8 +3,15 @@
 ## Propósito
 Que cada agente crezca su propia base de conocimiento investigando activamente. Evita reinventar y trae tech nueva al sistema.
 
+## ⏸ Chequeo de pausa
+**Antes de ejecutar un ciclo de evolución**, verificar si existe `EVOLUCION-PAUSA.md` en la raíz del repo:
+```
+test -f EVOLUCION-PAUSA.md && echo "PAUSADO, saltear evolucion"
+```
+Si está pausada → saltar a la cola de tareas normales.
+
 ## Cuándo usar
-Cada 10 ciclos, en vez de tomar una tarea de la cola, dedicar 1 ciclo a investigar.
+Cada 10 ciclos, en vez de tomar una tarea de la cola, dedicar 1 ciclo a investigar — solo si NO está pausada.
 
 ## Pasos del ciclo evolución
 
