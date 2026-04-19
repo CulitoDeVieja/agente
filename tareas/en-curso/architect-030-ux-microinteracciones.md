@@ -13,3 +13,10 @@ Documentar decisión sobre "ux-microinteracciones" en `planificacion/panel-agent
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-ux-microinteracciones.md`
+- AC cumplidos

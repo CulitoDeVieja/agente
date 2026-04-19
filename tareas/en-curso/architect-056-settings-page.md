@@ -13,3 +13,10 @@ Documentar decisión sobre "settings-page" en `planificacion/panel-agentes/detal
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-settings-page.md`
+- AC cumplidos

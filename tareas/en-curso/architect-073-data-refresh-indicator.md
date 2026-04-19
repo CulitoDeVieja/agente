@@ -13,3 +13,10 @@ Documentar decisión sobre "data-refresh-indicator" en `planificacion/panel-agen
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-data-refresh-indicator.md`
+- AC cumplidos

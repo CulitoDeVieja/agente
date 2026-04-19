@@ -13,3 +13,10 @@ Documentar decisión sobre "focus-management" en `planificacion/panel-agentes/de
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-focus-management.md`
+- AC cumplidos

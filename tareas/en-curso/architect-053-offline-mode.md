@@ -13,3 +13,10 @@ Documentar decisión sobre "offline-mode" en `planificacion/panel-agentes/detall
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-offline-mode.md`
+- AC cumplidos

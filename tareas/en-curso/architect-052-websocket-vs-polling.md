@@ -13,3 +13,10 @@ Documentar decisión sobre "websocket-vs-polling" en `planificacion/panel-agente
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-websocket-vs-polling.md`
+- AC cumplidos

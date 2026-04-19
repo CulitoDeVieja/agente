@@ -13,3 +13,10 @@ Documentar decisión sobre "pagination-vs-infinite" en `planificacion/panel-agen
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-pagination-vs-infinite.md`
+- AC cumplidos

@@ -13,3 +13,10 @@ Documentar decisión sobre "i18n-future" en `planificacion/panel-agentes/detalle
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-i18n-future.md`
+- AC cumplidos

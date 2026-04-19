@@ -13,3 +13,10 @@ Documentar decisión sobre "paleta-colores" en `planificacion/panel-agentes/deta
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-paleta-colores.md`
+- AC cumplidos

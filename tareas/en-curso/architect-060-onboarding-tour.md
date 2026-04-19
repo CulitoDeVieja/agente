@@ -13,3 +13,10 @@ Documentar decisión sobre "onboarding-tour" en `planificacion/panel-agentes/det
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-onboarding-tour.md`
+- AC cumplidos

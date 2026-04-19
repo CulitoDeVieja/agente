@@ -13,3 +13,10 @@ Documentar decisión sobre "concurrent-edit-detection" en `planificacion/panel-a
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-concurrent-edit-detection.md`
+- AC cumplidos

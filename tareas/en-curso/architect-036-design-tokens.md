@@ -13,3 +13,10 @@ Documentar decisión sobre "design-tokens" en `planificacion/panel-agentes/detal
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-design-tokens.md`
+- AC cumplidos

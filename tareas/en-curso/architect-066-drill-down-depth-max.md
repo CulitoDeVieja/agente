@@ -13,3 +13,10 @@ Documentar decisión sobre "drill-down-depth-max" en `planificacion/panel-agente
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-drill-down-depth-max.md`
+- AC cumplidos

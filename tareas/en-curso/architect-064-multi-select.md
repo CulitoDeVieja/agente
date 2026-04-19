@@ -13,3 +13,10 @@ Documentar decisión sobre "multi-select" en `planificacion/panel-agentes/detall
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-multi-select.md`
+- AC cumplidos

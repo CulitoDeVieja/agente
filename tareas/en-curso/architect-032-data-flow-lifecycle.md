@@ -13,3 +13,10 @@ Documentar decisión sobre "data-flow-lifecycle" en `planificacion/panel-agentes
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-data-flow-lifecycle.md`
+- AC cumplidos

@@ -13,3 +13,10 @@ Documentar decisión sobre "config-persistence" en `planificacion/panel-agentes/
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-config-persistence.md`
+- AC cumplidos

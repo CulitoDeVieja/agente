@@ -13,3 +13,10 @@ Documentar decisión sobre "error-reporting-ui" en `planificacion/panel-agentes/
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-error-reporting-ui.md`
+- AC cumplidos

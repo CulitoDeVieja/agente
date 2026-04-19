@@ -13,3 +13,10 @@ Documentar decisión sobre "drag-and-drop" en `planificacion/panel-agentes/detal
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-drag-and-drop.md`
+- AC cumplidos

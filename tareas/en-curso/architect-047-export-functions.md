@@ -13,3 +13,10 @@ Documentar decisión sobre "export-functions" en `planificacion/panel-agentes/de
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-export-functions.md`
+- AC cumplidos

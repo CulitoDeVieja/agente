@@ -13,3 +13,10 @@ Documentar decisión sobre "offline-indicator" en `planificacion/panel-agentes/d
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-offline-indicator.md`
+- AC cumplidos

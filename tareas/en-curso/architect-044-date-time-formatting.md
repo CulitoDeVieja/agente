@@ -13,3 +13,10 @@ Documentar decisión sobre "date-time-formatting" en `planificacion/panel-agente
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-date-time-formatting.md`
+- AC cumplidos

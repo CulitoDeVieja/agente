@@ -13,3 +13,10 @@ Documentar decisión sobre "dirty-state" en `planificacion/panel-agentes/detalle
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-dirty-state.md`
+- AC cumplidos

@@ -13,3 +13,10 @@ Documentar decisión sobre "print-styles" en `planificacion/panel-agentes/detall
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-print-styles.md`
+- AC cumplidos

@@ -13,3 +13,10 @@ Documentar decisión sobre "keyboard-shortcuts-spec" en `planificacion/panel-age
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-keyboard-shortcuts-spec.md`
+- AC cumplidos

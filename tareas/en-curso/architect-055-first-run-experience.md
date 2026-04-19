@@ -13,3 +13,10 @@ Documentar decisión sobre "first-run-experience" en `planificacion/panel-agente
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-first-run-experience.md`
+- AC cumplidos

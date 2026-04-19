@@ -13,3 +13,10 @@ Documentar decisión sobre "pinned-items" en `planificacion/panel-agentes/detall
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-pinned-items.md`
+- AC cumplidos

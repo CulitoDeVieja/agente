@@ -13,3 +13,10 @@ Documentar decisión sobre "spacing-grid" en `planificacion/panel-agentes/detall
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-spacing-grid.md`
+- AC cumplidos

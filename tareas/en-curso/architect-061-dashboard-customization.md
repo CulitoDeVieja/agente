@@ -13,3 +13,10 @@ Documentar decisión sobre "dashboard-customization" en `planificacion/panel-age
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-dashboard-customization.md`
+- AC cumplidos

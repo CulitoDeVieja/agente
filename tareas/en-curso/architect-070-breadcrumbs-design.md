@@ -13,3 +13,10 @@ Documentar decisión sobre "breadcrumbs-design" en `planificacion/panel-agentes/
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-breadcrumbs-design.md`
+- AC cumplidos

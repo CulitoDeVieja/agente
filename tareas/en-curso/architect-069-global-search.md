@@ -13,3 +13,10 @@ Documentar decisión sobre "global-search" en `planificacion/panel-agentes/detal
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-global-search.md`
+- AC cumplidos

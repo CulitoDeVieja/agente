@@ -13,3 +13,10 @@ Documentar decisión sobre "tooltips-strategy" en `planificacion/panel-agentes/d
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-tooltips-strategy.md`
+- AC cumplidos

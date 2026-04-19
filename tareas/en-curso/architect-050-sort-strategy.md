@@ -13,3 +13,10 @@ Documentar decisión sobre "sort-strategy" en `planificacion/panel-agentes/detal
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-sort-strategy.md`
+- AC cumplidos

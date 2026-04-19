@@ -13,3 +13,10 @@ Documentar decisión sobre "version-update-indicator" en `planificacion/panel-ag
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-version-update-indicator.md`
+- AC cumplidos

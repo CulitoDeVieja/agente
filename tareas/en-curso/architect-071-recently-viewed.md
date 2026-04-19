@@ -13,3 +13,10 @@ Documentar decisión sobre "recently-viewed" en `planificacion/panel-agentes/det
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-recently-viewed.md`
+- AC cumplidos

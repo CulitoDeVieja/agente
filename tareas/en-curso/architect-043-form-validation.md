@@ -13,3 +13,10 @@ Documentar decisión sobre "form-validation" en `planificacion/panel-agentes/det
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-form-validation.md`
+- AC cumplidos

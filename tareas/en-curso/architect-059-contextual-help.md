@@ -13,3 +13,10 @@ Documentar decisión sobre "contextual-help" en `planificacion/panel-agentes/det
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-contextual-help.md`
+- AC cumplidos

@@ -13,3 +13,10 @@ Documentar decisión sobre "loading-patterns" en `planificacion/panel-agentes/de
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-loading-patterns.md`
+- AC cumplidos

@@ -13,3 +13,10 @@ Documentar decisión sobre "modal-dialog-patterns" en `planificacion/panel-agent
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-modal-dialog-patterns.md`
+- AC cumplidos

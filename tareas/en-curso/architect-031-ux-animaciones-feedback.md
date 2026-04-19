@@ -13,3 +13,10 @@ Documentar decisión sobre "ux-animaciones-feedback" en `planificacion/panel-age
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-ux-animaciones-feedback.md`
+- AC cumplidos

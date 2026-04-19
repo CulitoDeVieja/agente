@@ -13,3 +13,10 @@ Documentar decisión sobre "url-state-deep-link" en `planificacion/panel-agentes
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-url-state-deep-link.md`
+- AC cumplidos

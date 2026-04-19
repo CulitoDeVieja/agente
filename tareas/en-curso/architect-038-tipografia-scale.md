@@ -13,3 +13,10 @@ Documentar decisión sobre "tipografia-scale" en `planificacion/panel-agentes/de
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-tipografia-scale.md`
+- AC cumplidos

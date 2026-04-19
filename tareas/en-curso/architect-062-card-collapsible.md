@@ -13,3 +13,10 @@ Documentar decisión sobre "card-collapsible" en `planificacion/panel-agentes/de
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-card-collapsible.md`
+- AC cumplidos

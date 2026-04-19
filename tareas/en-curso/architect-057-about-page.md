@@ -13,3 +13,10 @@ Documentar decisión sobre "about-page" en `planificacion/panel-agentes/detalle/
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-about-page.md`
+- AC cumplidos

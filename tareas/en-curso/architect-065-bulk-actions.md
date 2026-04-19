@@ -13,3 +13,10 @@ Documentar decisión sobre "bulk-actions" en `planificacion/panel-agentes/detall
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-bulk-actions.md`
+- AC cumplidos

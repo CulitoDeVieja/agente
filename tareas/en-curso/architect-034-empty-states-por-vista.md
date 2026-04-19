@@ -13,3 +13,10 @@ Documentar decisión sobre "empty-states-por-vista" en `planificacion/panel-agen
 - [ ] Alternativas descartadas.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Decisión: `planificacion/panel-agentes/detalle/architect-empty-states-por-vista.md`
+- AC cumplidos
