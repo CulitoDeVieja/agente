@@ -13,3 +13,11 @@ Documentar plan de "ops-release-v011-parche" en `planificacion/panel-agentes/det
 - [ ] Criterio binario.
 
 ## Depende de: (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-ops-release-v011-parche.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
