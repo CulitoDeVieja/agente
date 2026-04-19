@@ -1,0 +1,15 @@
+# Tarea: plan audit-bundle-size-final
+
+**Rol:** auditor-ops
+**Creada:** 2026-04-19
+**Modo master:** panel-agentes
+
+## Qué hacer
+Documentar plan de "audit-bundle-size-final" en `planificacion/panel-agentes/detalle/auditor-ops-audit-bundle-size-final.md`. Pasos, comandos, criterio pasa/no-pasa.
+
+## AC
+- [ ] Archivo creado.
+- [ ] Pasos concretos.
+- [ ] Criterio binario.
+
+## Depende de: (ninguna)
