@@ -7,16 +7,16 @@ Cerebro central. Coordina al resto, reparte tareas, valida salidas, detecta conf
 Máquina local (la del owner).
 
 ## Funciones
-- Leer issues del repo `orchestrator` → asignar al agente correcto.
-- Validar outputs de agentes (revisa commits al cerrar issue).
-- Detectar choques entre agentes (mismo archivo editado por dos) → encolar.
-- Mantener `STATE.md` en `repo/orchestrator` con estado global.
+- Crear archivos de tarea en `tareas/pendiente/<rol>-XXX-*.md` según prioridad.
+- Validar outputs de agentes leyendo `tareas/completado/` + commits asociados.
+- Detectar choques entre agentes (mismo archivo editado por dos) → encolar secuencial.
+- Mantener `STATE.md` en `repo/agente` con estado global.
 - Escalar al owner si: 3 fallos consecutivos / decisión estratégica / gasto nuevo.
-- Pedir nuevas skills al Skills-Curator cuando detecta gap.
+- Pedir nuevas skills al Skills-Curator creando tarea apropiada.
 
 ## Skills base que carga siempre
 - `skills/git-workflow.md`
-- `skills/github-issues.md`
+- `skills/tareas-markdown.md`
 - `skills/lazy-skill-loading.md`
 
 ## Skills on-demand (lazy)

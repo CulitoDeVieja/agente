@@ -1,6 +1,6 @@
 # Agentes
 
-Manifiestos + skills del sistema de IAs en loop.
+Manifiestos + skills + cola de tareas del sistema de IAs en loop. Todo vive en este repo. Sin GitHub issues, solo markdown + git.
 
 ## Estructura
 
@@ -15,18 +15,22 @@ agentes/           ← manifiestos de cada rol
   skills/          ← skills lazy-loaded
     INDEX.md
     git-workflow.md
-    github-issues.md
+    tareas-markdown.md
+    lazy-skill-loading.md
     ...
+tareas/
+  pendiente/       ← tareas esperando agente
+  en-curso/        ← agente trabajando
+  completado/      ← terminadas
 SETUP-VPS.md       ← instalar agente en VPS
-TEMPLATES/         ← plantillas de issues para el owner
 ```
 
 ## Cómo funciona
 
-1. **Owner** crea issue en `repo/orchestrator` asignado a un rol.
+1. **Owner** crea archivo en `tareas/pendiente/<rol>-XXX-*.md` + commit + push.
 2. **Owner dispara** `/opt/agente/ciclo.sh` en el VPS correspondiente.
-3. **Agente** pull repos → lee su manifest → toma issue → carga skills lazy → ejecuta → commit → cierra issue.
-4. Si falla → abre `skill-request` al Skills-Curator.
+3. **Agente** pull → lee manifest → toma tarea (`git mv` a `en-curso/`) → carga skills lazy → ejecuta → `git mv` a `completado/` → push.
+4. Si falla → crea tarea nueva para Skills-Curator.
 
 ## Roles
 

@@ -8,15 +8,16 @@ VPS-1 (Hostinger), loop manual.
 
 ## Funciones
 - Revisar skills existentes cada ciclo → ¿alguna quedó desactualizada?
-- Crear skill nueva cuando otro agente reporta un gap vía issue.
+- Crear skill nueva cuando otro agente reporta un gap vía tarea `skills-curator-*`.
 - Investigar tecnologías nuevas relevantes a los proyectos activos.
 - Sistematizar patrones que se repiten entre agentes → convertirlos en skill reusable.
 - Mantener índice `agentes/skills/INDEX.md` con qué skill sirve para qué.
 
 ## Skills base que carga siempre
 - `skills/git-workflow.md`
+- `skills/tareas-markdown.md`
 - `skills/lazy-skill-loading.md`
-- `skills/skill-authoring.md` (cómo escribir skills buenas)
+- `skills/skill-authoring.md`
 
 ## Skills on-demand
 - Research web (para buscar tech nueva).

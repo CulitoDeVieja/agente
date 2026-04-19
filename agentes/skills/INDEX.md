@@ -7,7 +7,7 @@ Se cargan **lazy**: el agente lee solo las que necesita para la tarea actual, pa
 ## Skills base (todos los agentes las cargan siempre)
 
 - `git-workflow.md` — pull --rebase, push, resolución de conflictos.
-- `github-issues.md` — tomar, asignar, cerrar issues con `gh`.
+- `tareas-markdown.md` — tomar, trabajar y completar tareas desde `tareas/`.
 - `lazy-skill-loading.md` — cómo decidir qué skills cargar.
 
 ## Skills por rol

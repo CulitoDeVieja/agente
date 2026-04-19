@@ -32,15 +32,7 @@ claude /login
 
 Seguir el flujo OAuth (copia-pega token del navegador). Queda guardado en `~/.claude/`.
 
-## 3. Instalar GitHub CLI
-
-```bash
-sudo apt install gh
-gh auth login
-# elegir HTTPS, pegar token personal
-```
-
-## 4. Clonar repos
+## 3. Clonar repos
 
 ```bash
 sudo mkdir -p /opt/agente
@@ -48,12 +40,18 @@ sudo chown $USER:$USER /opt/agente
 cd /opt/agente
 
 git clone https://github.com/CulitoDeVieja/agente.git
-git clone https://github.com/<owner>/orchestrator.git
-# Clonar también los repos de proyecto que el agente vaya a tocar:
+# Clonar los repos de proyecto que el agente vaya a tocar:
 # git clone https://github.com/<owner>/<proyecto>.git
 ```
 
-## 5. Definir rol del agente
+Configurar git identity (el rol firma commits):
+
+```bash
+git config --global user.name "<ROL> (agente)"
+git config --global user.email "<rol>@agente.local"
+```
+
+## 4. Definir rol del agente
 
 ```bash
 echo "export AGENT_ROLE=builder" >> ~/.bashrc
@@ -61,7 +59,7 @@ echo "export AGENT_ROLE=builder" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-## 6. Script de ciclo (1 archivo)
+## 5. Script de ciclo (1 archivo)
 
 Crear `/opt/agente/ciclo.sh`:
 
@@ -71,18 +69,15 @@ set -e
 cd /opt/agente/agente
 git pull --rebase
 
-cd /opt/agente/orchestrator
-git pull --rebase
-
 # Arranca sesión de Claude Code con contexto del rol
-claude --prompt "Sos el agente $AGENT_ROLE. Lee agentes/$AGENT_ROLE.md del repo agente y seguí sus instrucciones. Busca tu próximo issue con: gh issue list --repo <owner>/orchestrator --assignee $AGENT_ROLE --state open. Ejecuta, commitea, cerrá el issue. Si cola vacía → reportá 'cola vacía' y salí."
+claude --prompt "Sos el agente $AGENT_ROLE. Lee /opt/agente/agente/agentes/$AGENT_ROLE.md y seguí sus instrucciones. Tus skills base están en /opt/agente/agente/agentes/skills/. Tu cola: ls /opt/agente/agente/tareas/pendiente/ | grep ^$AGENT_ROLE-. Si hay tarea: git mv a tareas/en-curso, ejecutá, git mv a tareas/completado con log. Si cola vacía → 'sin novedades' y salí."
 ```
 
 ```bash
 chmod +x /opt/agente/ciclo.sh
 ```
 
-## 7. Loopear manual (owner dispara)
+## 6. Loopear manual (owner dispara)
 
 Cada vez que quieras un turno del agente:
 
@@ -91,9 +86,9 @@ ssh vps-X
 /opt/agente/ciclo.sh
 ```
 
-O por cola: crear issues, después disparar el ciclo N veces.
+O por cola: crear archivos `tareas/pendiente/<rol>-XXX-*.md` en el repo `agente`, commit + push, después disparar el ciclo N veces en el VPS del rol correspondiente.
 
-## 8. Verificación
+## 7. Verificación
 
 ```bash
 # Rol correcto
@@ -104,9 +99,6 @@ ls /opt/agente/
 
 # Claude autenticado
 claude whoami
-
-# GH autenticado
-gh auth status
 ```
 
 ---
@@ -123,5 +115,5 @@ gh auth status
 ## Troubleshooting
 
 - `claude: command not found` → npm global path. Agregar `export PATH=$PATH:$(npm prefix -g)/bin` al `.bashrc`.
-- `gh: authentication required` → `gh auth login` de nuevo.
-- Agente no encuentra issues → verificar que `$AGENT_ROLE` está exportado en la shell que corre el ciclo.
+- Agente no encuentra tareas → verificar que `$AGENT_ROLE` está exportado + que hay archivos con ese prefijo en `tareas/pendiente/`.
+- `git pull` falla → conflicto de merge. Otro agente pushó en paralelo. Rebase manual una vez, después reintenta.
