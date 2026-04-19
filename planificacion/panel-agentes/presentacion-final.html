@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Plan Final · Panel Agentes</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', 'Segoe UI', sans-serif; }
+:root {
+  --bg: #07090e; --panel: #10151f; --surface: #181f2c; --border: #27324a;
+  --text: #e7ebf2; --muted: #8791a4; --dim: #5c6577;
+  --accent: #4c9aff; --green: #22c55e; --orange: #f59e0b; --purple: #a78bfa; --red: #ef4444;
+}
+body { background: var(--bg); color: var(--text); min-height: 100vh; }
+.deck { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+.slide {
+  background: linear-gradient(180deg, var(--panel) 0%, #0a0e16 100%);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 48px; margin-bottom: 32px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+.slide .num { color: var(--dim); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+.slide h1 { font-size: 3rem; font-weight: 700; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; font-family: Georgia, serif; }
+.slide h1 .accent { color: var(--accent); }
+.slide h2 { font-size: 2rem; font-weight: 600; margin-bottom: 24px; font-family: Georgia, serif; }
+.slide .sub { color: var(--muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
+.slide p { color: var(--muted); font-size: 1rem; line-height: 1.6; margin-bottom: 12px; }
+.slide strong { color: var(--text); }
+
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 24px; }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+.card .t { font-size: 0.75rem; color: var(--dim); text-transform: uppercase; letter-spacing: 1px; }
+.card h3 { font-size: 1.2rem; margin: 6px 0 10px; font-weight: 600; }
+.card .body { color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+.agent-card { border-left: 4px solid; }
+.agent-card.o { border-color: var(--accent); }
+.agent-card.s { border-color: var(--purple); }
+.agent-card.b { border-color: var(--green); }
+.agent-card.a { border-color: var(--orange); }
+.agent-card .role { font-size: 0.95rem; font-weight: 700; }
+.agent-card .vps { font-size: 0.7rem; color: var(--muted); margin-bottom: 6px; }
+.agent-card .desc { font-size: 0.82rem; color: var(--muted); line-height: 1.45; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 24px; }
+.stat { text-align: center; padding: 20px; background: var(--surface); border-radius: 10px; }
+.stat .num { font-size: 2.5rem; font-weight: 700; color: var(--accent); line-height: 1; }
+.stat .lbl { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+.stat.green .num { color: var(--green); }
+.stat.orange .num { color: var(--orange); }
+.stat.purple .num { color: var(--purple); }
+
+.flow { display: flex; align-items: center; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+.flow-step { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; min-width: 150px; }
+.flow-step .n { font-size: 0.75rem; color: var(--accent); font-weight: 700; }
+.flow-step .t { font-size: 0.95rem; font-weight: 600; margin: 4px 0; }
+.flow-step .d { font-size: 0.75rem; color: var(--muted); }
+.flow-arrow { color: var(--accent); font-size: 1.5rem; }
+
+.pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+.pill { background: var(--surface); border: 1px solid var(--border); padding: 5px 12px; border-radius: 14px; font-size: 0.78rem; color: var(--muted); }
+.pill.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+.hero { background: linear-gradient(135deg, rgba(76,154,255,0.15), rgba(167,139,250,0.1)); border: 1px solid rgba(76,154,255,0.3); }
+
+.footer-note { text-align: center; color: var(--dim); font-size: 0.8rem; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+  <!-- ============ SLIDE 1 : PORTADA ============ -->
+  <section class="slide hero">
+    <div class="num">Deck · 2026-04-19</div>
+    <h1>Panel <span class="accent">Agentes</span></h1>
+    <p class="sub">Plan final · Testear cómo un sistema multi-agente planifica, cura skills, programa y audita código. La app es el primer experimento real.</p>
+    <div class="pills">
+      <span class="pill active">Tauri 2</span>
+      <span class="pill active">React + TS</span>
+      <span class="pill active">Rust backend</span>
+      <span class="pill active">Windows .msi</span>
+      <span class="pill">Web futuro</span>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 2 : POR QUÉ ============ -->
+  <section class="slide">
+    <div class="num">Slide 2 · Visión</div>
+    <h2>El objetivo real</h2>
+    <p class="sub">Construir la app es <strong>la excusa</strong>. El experimento: medir si 4 agentes Claude en loop pueden <strong>planificar, curar skills, programar y auditar</strong> un proyecto real sin chocarse.</p>
+    <div class="grid-2">
+      <div class="card">
+        <div class="t">Lo que probamos</div>
+        <h3>Coordinación distribuida</h3>
+        <div class="body">4 agentes en 4 máquinas, repo git como única memoria compartida, tareas markdown como cola. Sin orquestador central vivo: el repo ES el orquestador.</div>
+      </div>
+      <div class="card">
+        <div class="t">Lo que aprendemos</div>
+        <h3>Efectividad del patrón</h3>
+        <div class="body">Qué tan autónomo es el sistema, cuánto overhead tiene, qué tipo de tarea se adapta mejor, dónde se atascan los agentes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 3 : 4 AGENTES ============ -->
+  <section class="slide">
+    <div class="num">Slide 3 · Roles</div>
+    <h2>4 agentes en loop · 2 on-demand</h2>
+    <div class="grid-4">
+      <div class="card agent-card o">
+        <div class="role">#0 Orchestrator</div>
+        <div class="vps">local</div>
+        <div class="desc">Consolida, unifica, detecta errores, escala al owner. Único que responde directo.</div>
+      </div>
+      <div class="card agent-card s">
+        <div class="role">#1 Skills-Curator</div>
+        <div class="vps">VPS-1 · Hostinger</div>
+        <div class="desc">Mantiene biblioteca de skills técnicas. Busca, crea, mejora patrones reusables.</div>
+      </div>
+      <div class="card agent-card b">
+        <div class="role">#2 Builder</div>
+        <div class="vps">VPS-2 · Hostinger</div>
+        <div class="desc">Programa. Implementa specs. Escribe tests. Codea el árbol real del proyecto.</div>
+      </div>
+      <div class="card agent-card a">
+        <div class="role">#3 Auditor + Ops</div>
+        <div class="vps">VPS-3 · Hostinger</div>
+        <div class="desc">QA estática + dinámica. Deploy. Release. Soporte post-lanzamiento.</div>
+      </div>
+    </div>
+    <p style="margin-top:20px; font-size:0.85rem;"><strong>On-demand:</strong> Architect (spec + ADR) · Scout (research de mercado/usuarios).</p>
+  </section>
+
+  <!-- ============ SLIDE 4 : FLUJO ============ -->
+  <section class="slide">
+    <div class="num">Slide 4 · Cómo funciona</div>
+    <h2>Ciclo: planificar → programar → auditar</h2>
+    <div class="flow">
+      <div class="flow-step"><div class="n">FASE A</div><div class="t">Planificación</div><div class="d">Architect + Skills-Curator + Builder + Auditor escriben planes en <code>planificacion/</code></div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="n">REVISIÓN</div><div class="t">Orchestrator aprueba</div><div class="d">Valida consistencia entre los 4 docs + consolida en <code>revision.md</code></div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="n">FASE B</div><div class="t">Ejecución</div><div class="d">Builder codea, Auditor testa, Orchestrator unifica</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="n">RELEASE</div><div class="t">v0.1.0</div><div class="d">Build .msi + .exe, subido a GitHub releases</div></div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 5 : STACK ============ -->
+  <section class="slide">
+    <div class="num">Slide 5 · Tech</div>
+    <h2>Stack elegido (por orchestrator)</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="t">Frontend</div>
+        <h3>React 18 + TS + Tailwind v4</h3>
+        <div class="body">Vite como bundler. Contexto para estado global. Sin state manager externo (ADR-001).</div>
+      </div>
+      <div class="card">
+        <div class="t">Backend embebido</div>
+        <h3>Rust (Tauri 2)</h3>
+        <div class="body">8 comandos IPC: list_tasks, read_state, read_task, git_pull, git_log, git_status, get_config, set_config.</div>
+      </div>
+      <div class="card">
+        <div class="t">Build + Release</div>
+        <h3>.msi + .exe Windows</h3>
+        <div class="body">Target &lt;15MB. Nativo, sin dependencia Node en runtime. Futuro: PWA web.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 6 : NÚMEROS ============ -->
+  <section class="slide">
+    <div class="num">Slide 6 · Escala actual</div>
+    <h2>Lo que cada agente tiene asignado</h2>
+    <div class="stats">
+      <div class="stat"><div class="num">100</div><div class="lbl">Tareas · Orchestrator*</div></div>
+      <div class="stat purple"><div class="num">100</div><div class="lbl">Tareas · Skills-Curator</div></div>
+      <div class="stat green"><div class="num">101</div><div class="lbl">Tareas · Builder</div></div>
+      <div class="stat orange"><div class="num">100</div><div class="lbl">Tareas · Auditor + Ops</div></div>
+    </div>
+    <div class="stats" style="margin-top:16px;">
+      <div class="stat green"><div class="num">5</div><div class="lbl">Completadas Orchestrator</div></div>
+      <div class="stat"><div class="num">24</div><div class="lbl">Completadas Skills-Curator</div></div>
+      <div class="stat green"><div class="num">100</div><div class="lbl">Completadas Builder</div></div>
+      <div class="stat"><div class="num">7+</div><div class="lbl">Completadas Auditor</div></div>
+    </div>
+    <p style="margin-top:20px; font-size:0.85rem;">* Orchestrator mantiene su cola dinámica según detecta trabajo de los demás.</p>
+  </section>
+
+  <!-- ============ SLIDE 7 : HITOS ============ -->
+  <section class="slide">
+    <div class="num">Slide 7 · Progreso real</div>
+    <h2>Hitos hasta ahora</h2>
+    <div class="grid-2">
+      <div class="card" style="border-left: 4px solid var(--green);">
+        <div class="t">Hito 1 · completado</div>
+        <h3>Repo panel-agentes creado</h3>
+        <div class="body">Builder pusheó 27 archivos: scaffold Tauri 2 + React + TS + Tailwind + 8 comandos Rust + 6 tests vitest. Commit <code>edf93b1</code>.</div>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--green);">
+        <div class="t">Hito 2 · completado</div>
+        <h3>Audit estática ✅ PASA</h3>
+        <div class="body">Auditor-ops validó código sin bugs críticos. 3 divergencias menores documentadas, no bloquean release.</div>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--orange);">
+        <div class="t">Hito 3 · pendiente</div>
+        <h3>Build .msi en Windows</h3>
+        <div class="body">Requiere ejecutar <code>cargo tauri build</code> en Windows real. Auditor corre Linux; espera disparo en VPS con Windows.</div>
+      </div>
+      <div class="card" style="border-left: 4px solid var(--dim);">
+        <div class="t">Hito 4 · futuro</div>
+        <h3>Release v0.1.0 público</h3>
+        <div class="body">Subir .msi + .exe + release notes a GitHub. Notificar owner.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 8 : FUTURO AGENTES ============ -->
+  <section class="slide">
+    <div class="num">Slide 8 · Roadmap de agentes</div>
+    <h2>Iremos sumando agentes</h2>
+    <p class="sub">El sistema es extensible. Cada agente nuevo trae una especialidad y se suma al repo sin romper los existentes.</p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="t">v0.1 (hoy)</div>
+        <h3>4 + 2 agentes</h3>
+        <div class="body">Orchestrator, Skills-Curator, Builder, Auditor-Ops · Architect, Scout (on-demand).</div>
+      </div>
+      <div class="card">
+        <div class="t">v0.2 (sugerido)</div>
+        <h3>+ Lupa (inspección)</h3>
+        <div class="body">Zoom al código real, detecta bugs sutiles que audit estático no ve.</div>
+      </div>
+      <div class="card">
+        <div class="t">v0.3+ (abierto)</div>
+        <h3>Especialistas</h3>
+        <div class="body">Designer (Figma), DevRel (docs), Security (audits), i18n, a11y... Un agente por especialidad a medida que el sistema crece.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SLIDE 9 : CIERRE ============ -->
+  <section class="slide hero">
+    <div class="num">Slide 9 · Cierre</div>
+    <h1>El panel se construye <span class="accent">solo</span>.</h1>
+    <p class="sub">4 agentes trabajando en paralelo. 401 tareas escritas. 136+ completadas. Un repo como cerebro compartido. La primera app de un sistema que va a crecer.</p>
+    <p style="margin-top:20px;"><strong>Próximo paso del owner:</strong> disparar el build Windows en VPS-3 para cerrar v0.1.0 y empezar la segunda app.</p>
+  </section>
+
+  <div class="footer-note">
+    Panel Agentes · plan final · 2026-04-19 · generado por orchestrator
+  </div>
+
+</div>
+
+</body>
+</html>
