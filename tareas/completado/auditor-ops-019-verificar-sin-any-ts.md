@@ -15,3 +15,11 @@ Documentar plan de "verificar-sin-any-ts" en `planificacion/panel-agentes/detall
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-verificar-sin-any-ts.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
