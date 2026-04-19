@@ -15,3 +15,11 @@ Documentar plan de "verificar-tests-pasan" en `planificacion/panel-agentes/detal
 
 ## Depende de:
 (ninguna)
+
+
+---
+
+## Log del agente
+- Plan documentado en `planificacion/panel-agentes/detalle/auditor-ops-verificar-tests-pasan.md`
+- Pasos concretos + criterio binario pasa/no-pasa incluidos
+- AC cumplidos
