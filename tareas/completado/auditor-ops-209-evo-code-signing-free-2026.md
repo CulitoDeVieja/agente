@@ -13,3 +13,7 @@ Ciclo evolución. Investigar web sobre "code-signing-free-2026" y guardar en `co
 - [ ] Aplicabilidad clara.
 
 ## Depende de: (ninguna)
+
+---
+## Log auditor-ops
+- Archivo: conocimiento/auditor-ops/2026-04-19-code-signing-free-2026.md
